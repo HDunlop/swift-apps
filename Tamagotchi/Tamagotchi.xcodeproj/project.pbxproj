@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3160E344238D347A001456D4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160E343238D347A001456D4 /* main.swift */; };
+		3160E34D238D3589001456D4 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160E34C238D3589001456D4 /* Tamagotchi.swift */; };
+		3160E35D238D3625001456D4 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160E34C238D3589001456D4 /* Tamagotchi.swift */; };
+		3160E361238D3727001456D4 /* TamagotchiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160E360238D3727001456D4 /* TamagotchiTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,21 @@
 /* Begin PBXFileReference section */
 		3160E340238D347A001456D4 /* Tamagotchi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tamagotchi; sourceTree = BUILT_PRODUCTS_DIR; };
 		3160E343238D347A001456D4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3160E34C238D3589001456D4 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
+		3160E355238D35EF001456D4 /* TamagotchiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TamagotchiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3160E359238D35F0001456D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3160E360238D3727001456D4 /* TamagotchiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TamagotchiTests.swift; path = ../../../TamagotchiTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3160E33D238D347A001456D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3160E352238D35EF001456D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				3160E342238D347A001456D4 /* Tamagotchi */,
+				3160E356238D35F0001456D4 /* TamagotchiTests */,
 				3160E341238D347A001456D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				3160E340238D347A001456D4 /* Tamagotchi */,
+				3160E355238D35EF001456D4 /* TamagotchiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +74,18 @@
 			isa = PBXGroup;
 			children = (
 				3160E343238D347A001456D4 /* main.swift */,
+				3160E34C238D3589001456D4 /* Tamagotchi.swift */,
 			);
 			path = Tamagotchi;
+			sourceTree = "<group>";
+		};
+		3160E356238D35F0001456D4 /* TamagotchiTests */ = {
+			isa = PBXGroup;
+			children = (
+				3160E359238D35F0001456D4 /* Info.plist */,
+				3160E360238D3727001456D4 /* TamagotchiTests.swift */,
+			);
+			path = TamagotchiTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +108,23 @@
 			productReference = 3160E340238D347A001456D4 /* Tamagotchi */;
 			productType = "com.apple.product-type.tool";
 		};
+		3160E354238D35EF001456D4 /* TamagotchiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3160E35A238D35F0001456D4 /* Build configuration list for PBXNativeTarget "TamagotchiTests" */;
+			buildPhases = (
+				3160E351238D35EF001456D4 /* Sources */,
+				3160E352238D35EF001456D4 /* Frameworks */,
+				3160E353238D35EF001456D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TamagotchiTests;
+			productName = TamagotchiTests;
+			productReference = 3160E355238D35EF001456D4 /* TamagotchiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +136,9 @@
 				ORGANIZATIONNAME = "Dunlop, Hugo (PEPW)";
 				TargetAttributes = {
 					3160E33F238D347A001456D4 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					3160E354238D35EF001456D4 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -111,16 +157,37 @@
 			projectRoot = "";
 			targets = (
 				3160E33F238D347A001456D4 /* Tamagotchi */,
+				3160E354238D35EF001456D4 /* TamagotchiTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3160E353238D35EF001456D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3160E33C238D347A001456D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3160E34D238D3589001456D4 /* Tamagotchi.swift in Sources */,
 				3160E344238D347A001456D4 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3160E351238D35EF001456D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3160E35D238D3625001456D4 /* Tamagotchi.swift in Sources */,
+				3160E361238D3727001456D4 /* TamagotchiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +325,40 @@
 			};
 			name = Release;
 		};
+		3160E35B238D35F0001456D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TamagotchiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HDunlop.TamagotchiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3160E35C238D35F0001456D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TamagotchiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HDunlop.TamagotchiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +376,15 @@
 			buildConfigurations = (
 				3160E348238D347A001456D4 /* Debug */,
 				3160E349238D347A001456D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3160E35A238D35F0001456D4 /* Build configuration list for PBXNativeTarget "TamagotchiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3160E35B238D35F0001456D4 /* Debug */,
+				3160E35C238D35F0001456D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
