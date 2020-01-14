@@ -10,14 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var enginePackage: UISwitch!
-    @IBOutlet weak var tiresPackage: UISwitch!
-    @IBOutlet weak var remainingFundsLabel: UILabel!
-    @IBOutlet weak var CarStatistics: UILabel!
+    @IBOutlet var enginePackage: UISwitch!
+    @IBOutlet var tiresPackage: UISwitch!
+    @IBOutlet var ecoFriendlyPackage: UISwitch!
+    @IBOutlet var fuelPackage: UISwitch!
+    @IBOutlet var memePackage: UISwitch!
+    @IBOutlet var crowdRespectLabel: UILabel!
+    @IBOutlet var remainingFundsLabel: UILabel!
+    @IBOutlet var CarStatistics: UILabel!
     
     var remainingFunds = 1_000 {
         didSet {
             remainingFundsLabel.text = "Remaining Funds: \(remainingFunds)"
+//            disableUnaffordablePackages
+        }
+    }
+    var respect = 0 {
+        didSet {
+            crowdRespectLabel.text = "Crowd Respect: \(respect)"
         }
     }
     var starterCars = StarterCars()
@@ -25,6 +35,7 @@ class ViewController: UIViewController {
     var car: Car? {
         didSet {
             CarStatistics.text = car?.displayStats()
+            
         }
     }
     
@@ -47,12 +58,12 @@ class ViewController: UIViewController {
         car = starterCars.cars[currentCarIndex]
     }
     
-    func checkFunds() {
-        if remainingFunds == 0 {
-            tiresPackage.isEnabled = false
-            enginePackage.isEnabled = false
-        }
-    }
+//    func checkFunds() {
+//        if remainingFunds == 0 {
+//            tiresPackage.isEnabled = false
+//            enginePackage.isEnabled = false
+//        }
+//    }
     
     @IBAction func enginePackageToggle(_ sender: Any) {
         if enginePackage.isOn {
@@ -74,6 +85,37 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func ecoFriendlyPackageToggle(_ sender: Any) {
+        if ecoFriendlyPackage.isOn {
+            car?.topSpeed -= 23
+            car?.acceleration += 2.4
+            remainingFunds -= 500
+        } else {
+            car?.topSpeed += 23
+            car?.acceleration -= 2.4
+            remainingFunds += 500
+        }
+    }
     
+    @IBAction func fuelPackageToggle(_ sender: Any) {
+        if fuelPackage.isOn {
+            car?.topSpeed += 12
+            car?.acceleration -= 4.3
+            remainingFunds -= 250
+        } else {
+            car?.topSpeed -= 12
+            car?.acceleration += 4.3
+            remainingFunds += 250
+        }
+    }
+    
+    @IBAction func memePackageToggle(_ sender: Any) {
+        if memePackage.isOn {
+            respect = 420
+            remainingFunds -= 1000
+        } else {
+            respect = 0
+            remainingFunds += 1000
+        }
+    }
 }
-
