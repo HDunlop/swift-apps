@@ -71,14 +71,12 @@ class Tamagotchi {
     
     func playGame() {
         for _ in 0..<5 {
-            let tamagotchiChoice = Int.random(in: 0...1)
+            let _ = Int.random(in: 0...1)
             print("""
             Which way will the tamagotchi turn?
             1. Right
             2. Left
 """)
-            
-            if
         }
     }
     
