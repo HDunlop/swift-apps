@@ -61,7 +61,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7E-cu-Ufw">
                                 <rect key="frame" x="347" y="639" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="engine"/>
+                                <accessibility key="accessibilityConfiguration" identifier="engine">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <action selector="enginePackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qp7-2Q-kYa"/>
                                 </connections>

@@ -79,13 +79,13 @@ class ViewController: UIViewController {
         memePackage.isEnabled = shouldBeEnabled(memePackage)
     }
     
-    func shouldBeEnabled(_ control: UISwitch) -> Bool {
-        if control.accessibilityIdentifier == "engine" {cost = 500}
-        else if control.accessibilityIdentifier == "tires" {cost = 500}
-        else if control.accessibilityIdentifier == "eco" {cost = 500}
-        else if control.accessibilityIdentifier == "fuel" {cost = 250}
+    func shouldBeEnabled(_ package: UISwitch) -> Bool {
+        if package.accessibilityIdentifier == "engine" {cost = 500}
+        else if package.accessibilityIdentifier == "tires" {cost = 500}
+        else if package.accessibilityIdentifier == "eco" {cost = 500}
+        else if package.accessibilityIdentifier == "fuel" {cost = 250}
         else {cost = 1000}
-        if control.isOn {
+        if package.isOn {
             return true
         } else if remainingFunds - cost >= 0 {
             return true
