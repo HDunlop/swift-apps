@@ -18,7 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet var crowdRespectLabel: UILabel!
     @IBOutlet var remainingFundsLabel: UILabel!
     @IBOutlet var CarStatistics: UILabel!
+    @IBOutlet var timeRemainingLabel: UILabel!
     
+//    button which stops timer and locks the screen before timer hits 0
+//    or
+//    displays final stats when timer hits 0
+    
+    var timeRemaining = 60
+    var timer: Timer?
+//    var stop = false
     var remainingFunds = 1_000 {
         didSet {
             remainingFundsLabel.text = "Remaining Funds: \(remainingFunds)"
@@ -46,6 +54,8 @@ class ViewController: UIViewController {
         car = starterCars.cars[currentCarIndex]
         remainingFundsLabel.text = "Remaining Funds: \(remainingFunds)"
         resetDisplay()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        timeRemainingLabel.text = "Remaining Time: \(timeRemaining)"
     }
     
     func resetDisplay() {
@@ -71,6 +81,12 @@ class ViewController: UIViewController {
         resetDisplay()
     }
     
+//    @IBAction func stopTimer(_ sender: Any) {
+//        stop = true
+//        timer?.invalidate()
+//        disableUnaffordablePackages()
+//    }
+    
     func disableUnaffordablePackages() {
         enginePackage.isEnabled = shouldBeEnabled(enginePackage)
         tiresPackage.isEnabled = shouldBeEnabled(tiresPackage)
@@ -85,9 +101,9 @@ class ViewController: UIViewController {
         else if package.accessibilityIdentifier == "eco" {cost = 500}
         else if package.accessibilityIdentifier == "fuel" {cost = 250}
         else {cost = 1000}
-        if package.isOn {
-            return true
-        } else if remainingFunds - cost >= 0 {
+        if (timeRemaining == 0) {
+            return false
+        } else if (package.isOn) || (remainingFunds - cost >= 0) {
             return true
         } else {
             return false
@@ -145,6 +161,16 @@ class ViewController: UIViewController {
         } else {
             respect = 0
             remainingFunds += 1000
+        }
+    }
+    
+    @objc func countdown() {
+        if timeRemaining > 0 {
+            timeRemaining -= 1
+            timeRemainingLabel.text = "Remaining Time: \(timeRemaining)"
+        } else {
+            timer?.invalidate()
+            disableUnaffordablePackages()
         }
     }
 }

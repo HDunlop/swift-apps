@@ -39,7 +39,11 @@ class CarCustomiserUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func test
+    func testThatStatsGetLoadedWhenItIsLaunched() {
+        let app = XCUIApplication()
+        app.launch()
+        
+    }
 
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {

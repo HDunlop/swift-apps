@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C51A85023CBA9490071B307"
-               BuildableName = "CarCustomiserTests.xctest"
-               BlueprintName = "CarCustomiserTests"
-               ReferencedContainer = "container:CarCustomiser.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C51A85B23CBA94A0071B307"
-               BuildableName = "CarCustomiserUITests.xctest"
-               BlueprintName = "CarCustomiserUITests"
-               ReferencedContainer = "container:CarCustomiser.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
