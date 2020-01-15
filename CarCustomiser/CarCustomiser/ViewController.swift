@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var remainingFunds = 1_000 {
         didSet {
             remainingFundsLabel.text = "Remaining Funds: \(remainingFunds)"
-//            disableUnaffordablePackages
+            disableUnaffordablePackages()
         }
     }
     var respect = 0 {
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
             crowdRespectLabel.text = "Crowd Respect: \(respect)"
         }
     }
+    var cost = 0
     var starterCars = StarterCars()
     var currentCarIndex = 0
     var car: Car? {
@@ -44,10 +45,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         car = starterCars.cars[currentCarIndex]
         remainingFundsLabel.text = "Remaining Funds: \(remainingFunds)"
+        resetDisplay()
+    }
+    
+    func resetDisplay() {
+        remainingFunds = 1000
+        enginePackage.setOn(false, animated: true)
+        tiresPackage.setOn(false, animated: true)
+        ecoFriendlyPackage.setOn(false, animated: true)
+        fuelPackage.setOn(false, animated: true)
+        memePackage.setOn(false, animated: true)
     }
     
     @IBAction func RandomCar(_ sender: Any) {
         car = starterCars.cars.randomElement()
+        resetDisplay()
     }
     
     @IBAction func NextCar(_ sender: Any) {
@@ -56,14 +68,31 @@ class ViewController: UIViewController {
             currentCarIndex = 0
         }
         car = starterCars.cars[currentCarIndex]
+        resetDisplay()
     }
     
-//    func checkFunds() {
-//        if remainingFunds == 0 {
-//            tiresPackage.isEnabled = false
-//            enginePackage.isEnabled = false
-//        }
-//    }
+    func disableUnaffordablePackages() {
+        enginePackage.isEnabled = shouldBeEnabled(enginePackage)
+        tiresPackage.isEnabled = shouldBeEnabled(tiresPackage)
+        ecoFriendlyPackage.isEnabled = shouldBeEnabled(ecoFriendlyPackage)
+        fuelPackage.isEnabled = shouldBeEnabled(fuelPackage)
+        memePackage.isEnabled = shouldBeEnabled(memePackage)
+    }
+    
+    func shouldBeEnabled(_ control: UISwitch) -> Bool {
+        if control.accessibilityIdentifier == "engine" {cost = 500}
+        else if control.accessibilityIdentifier == "tires" {cost = 500}
+        else if control.accessibilityIdentifier == "eco" {cost = 500}
+        else if control.accessibilityIdentifier == "fuel" {cost = 250}
+        else {cost = 1000}
+        if control.isOn {
+            return true
+        } else if remainingFunds - cost >= 0 {
+            return true
+        } else {
+            return false
+        }
+    }
     
     @IBAction func enginePackageToggle(_ sender: Any) {
         if enginePackage.isOn {
@@ -88,11 +117,11 @@ class ViewController: UIViewController {
     @IBAction func ecoFriendlyPackageToggle(_ sender: Any) {
         if ecoFriendlyPackage.isOn {
             car?.topSpeed -= 23
-            car?.acceleration += 2.4
+            car?.acceleration += 2
             remainingFunds -= 500
         } else {
             car?.topSpeed += 23
-            car?.acceleration -= 2.4
+            car?.acceleration -= 2
             remainingFunds += 500
         }
     }
@@ -100,11 +129,11 @@ class ViewController: UIViewController {
     @IBAction func fuelPackageToggle(_ sender: Any) {
         if fuelPackage.isOn {
             car?.topSpeed += 12
-            car?.acceleration -= 4.3
+            car?.acceleration -= 4
             remainingFunds -= 250
         } else {
             car?.topSpeed -= 12
-            car?.acceleration += 4.3
+            car?.acceleration += 4
             remainingFunds += 250
         }
     }

@@ -61,6 +61,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7E-cu-Ufw">
                                 <rect key="frame" x="347" y="639" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="engine"/>
                                 <connections>
                                     <action selector="enginePackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qp7-2Q-kYa"/>
                                 </connections>
@@ -68,6 +69,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uX5-6q-jj8">
                                 <rect key="frame" x="347" y="678" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tires"/>
                                 <connections>
                                     <action selector="tiresPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="wNX-0i-CGw"/>
                                 </connections>
@@ -106,6 +108,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mgj-uN-6fO">
                                 <rect key="frame" x="347" y="717" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="eco"/>
                                 <connections>
                                     <action selector="ecoFriendlyPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="0o8-RW-5oR"/>
                                 </connections>
@@ -113,6 +116,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rlO-ez-EDK">
                                 <rect key="frame" x="347" y="756" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fuel"/>
                                 <connections>
                                     <action selector="fuelPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="7dC-rz-XXH"/>
                                 </connections>
@@ -120,6 +124,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-f1-6Gt">
                                 <rect key="frame" x="347" y="795" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="meme"/>
                                 <connections>
                                     <action selector="memePackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="XhR-ky-3Sb"/>
                                 </connections>
