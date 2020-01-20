@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     var timeRemaining = 60
     var timer: Timer?
-//    var stop = false
+    var stop = false
     var remainingFunds = 1_000 {
         didSet {
             remainingFundsLabel.text = "Remaining Funds: \(remainingFunds)"
@@ -81,11 +81,11 @@ class ViewController: UIViewController {
         resetDisplay()
     }
     
-//    @IBAction func stopTimer(_ sender: Any) {
-//        stop = true
-//        timer?.invalidate()
-//        disableUnaffordablePackages()
-//    }
+    @IBAction func stopTimer(_ sender: Any) {
+        stop = true
+        countdown()
+        disableUnaffordablePackages()
+    }
     
     func disableUnaffordablePackages() {
         enginePackage.isEnabled = shouldBeEnabled(enginePackage)
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         else if package.accessibilityIdentifier == "eco" {cost = 500}
         else if package.accessibilityIdentifier == "fuel" {cost = 250}
         else {cost = 1000}
-        if (timeRemaining == 0) {
+        if (timeRemaining == 0) || (stop == true) {
             return false
         } else if (package.isOn) || (remainingFunds - cost >= 0) {
             return true
@@ -165,7 +165,7 @@ class ViewController: UIViewController {
     }
     
     @objc func countdown() {
-        if timeRemaining > 0 {
+        if (timeRemaining > 0) && (stop == false) {
             timeRemaining -= 1
             timeRemainingLabel.text = "Remaining Time: \(timeRemaining)"
         } else {
