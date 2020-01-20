@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         resetDisplay()
     }
     
-    @IBAction func stopTimer(_ sender: Any) {
+    @IBAction func StopTimer(_ sender: Any) {
         stop = true
         countdown()
         disableUnaffordablePackages()
