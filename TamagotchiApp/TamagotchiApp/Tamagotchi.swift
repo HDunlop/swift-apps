@@ -15,44 +15,69 @@ class Tamagotchi {
     var discipline: Int = 0
     var hunger: Int = 0
     var happiness: Int = 100
-    var name: String = ""
+    var name: String
     var ill: Bool = false
     var health: Int = 100
     var needsAttention: Bool = false
     var isAsleep: Bool = false
 
-    func setName(name: String) {
+    init(name: String) {
         self.name = name
     }
 
     func displayStats() -> String {
-        return """
+        return ("""
         Name: \(name)
         Age: \(age) years old
-        Happiness: \(happiness)
-        Weight: \(weight)
-        
-        """
+        Happiness: \(happiness)%
+        Weight: \(weight)kg
+        Hunger: \(hunger)%
+        Health: \(health)%
+        Discipline: \(discipline)%
+            
+        """)
     }
-
+    
     func eat() {
-        weight += 5
-        hunger -= 20
-        happiness += 20
-        needsAttention = false
-        health -= 10
-        print("The new values are weight, hunger, happiness and attention")
+        self.weight += 5
+        self.hunger -= 20
+        self.happiness += 20
+        self.needsAttention = false
+        self.health -= 10
     }
 
     func train() {
-        discipline += 20
-        happiness -= 15
-        print("The new stats are discipline and happiness")
+        self.discipline += 20
+        self.happiness -= 15
     }
 
     func giveMedicine() {
-        health += 20
-        happiness -= 15
-        print("The new stats are health and happiness")
+        self.health += 20
+        self.happiness -= 15
     }
+    
+    func playGame() {
+        self.happiness += 30
+        self.hunger += 20
+        self.weight -= 2
+        self.health += 15
+    }
+    
+    func setAge(age: Int) {
+        self.age = age
+    }
+    
+    func notDead() -> Bool {
+        if happiness == 0 {
+            return true
+        } else if weight == 100 {
+            return true
+        } else if health == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func killedYou() -> Bool {
 }
