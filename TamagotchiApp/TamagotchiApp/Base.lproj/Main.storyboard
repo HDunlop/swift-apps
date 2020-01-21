@@ -15,12 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-ys-IW0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stats" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-ys-IW0">
                                 <rect key="frame" x="20" y="44" width="374" height="346"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="86p-yM-SWX"/>
-                                    <constraint firstAttribute="height" constant="346" id="zRs-C6-Hdg"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,13 +25,36 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M6-Ve-eqa">
                                 <rect key="frame" x="20" y="398" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Feed"/>
+                                <state key="normal" title="Feed the alien a meal"/>
                                 <connections>
-                                    <action selector="feedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Day-3L-l5H"/>
+                                    <action selector="feedMealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YFu-Ek-tBK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Remaining" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LD-us-XP8">
+                                <rect key="frame" x="212" y="44" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NV-kv-6Jg">
+                                <rect key="frame" x="56" y="702" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vomit"/>
+                                <connections>
+                                    <action selector="vomitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAE-aT-E8Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNF-Kd-5sb">
+                                <rect key="frame" x="20" y="436" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Feed it a snacc"/>
+                                <connections>
+                                    <action selector="feedSnackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5uk-5y-JKv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-15-07Z">
-                                <rect key="frame" x="20" y="436" width="374" height="30"/>
+                                <rect key="frame" x="20" y="474" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Beat the child"/>
                                 <connections>
@@ -42,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-6f-JBl">
-                                <rect key="frame" x="20" y="474" width="374" height="30"/>
+                                <rect key="frame" x="20" y="512" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Give Medicine"/>
                                 <connections>
@@ -50,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-4h-PJf">
-                                <rect key="frame" x="20" y="512" width="374" height="30"/>
+                                <rect key="frame" x="20" y="550" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play Game"/>
                                 <connections>
@@ -59,16 +79,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="RiB-ys-IW0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6xw-Mj-2ce"/>
-                            <constraint firstItem="RiB-ys-IW0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Hvc-3D-M0f"/>
-                            <constraint firstItem="RiB-ys-IW0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Jrr-JV-qwF"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="RiB-ys-IW0" secondAttribute="bottom" constant="472" id="eba-Ad-uSu"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="beatOutlet" destination="vFa-15-07Z" id="rh7-xb-A94"/>
+                        <outlet property="feedMealOutlet" destination="4M6-Ve-eqa" id="yA8-8a-IAt"/>
+                        <outlet property="feedSnackOutlet" destination="gNF-Kd-5sb" id="uek-Z7-sOK"/>
+                        <outlet property="giveMedicineOutlet" destination="MFX-6f-JBl" id="nMZ-Oe-p5J"/>
+                        <outlet property="playOutlet" destination="qw7-4h-PJf" id="JcC-ky-h9v"/>
                         <outlet property="statsLabel" destination="RiB-ys-IW0" id="wbO-iH-aE2"/>
+                        <outlet property="timeRemainingLabel" destination="5LD-us-XP8" id="U2Q-jx-dAF"/>
+                        <outlet property="vomitOutlet" destination="2NV-kv-6Jg" id="n3h-rT-Yw3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
