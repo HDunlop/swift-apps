@@ -11,20 +11,29 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var statsLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var shit1Outlet: UIButton!
+    @IBOutlet var shit2Outlet: UIButton!
+    @IBOutlet var vomitOutlet: UIButton!
     
     
     let tamagotchi = Tamagotchi(name: "Sbeve")
-  
+    var timer: Timer?
+    var dead = false
+    var time = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         updateDisplay()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
     }
     
     func updateDisplay() {
         statsLabel.text = tamagotchi.displayStats()
     }
+    
+    
     
     @IBAction func feedButton(_ sender: Any) {
         tamagotchi.eat()
@@ -46,8 +55,28 @@ class ViewController: UIViewController {
         updateDisplay()
     }
     
-    func checkNotDead() {
-        
+//    func checkNotDead() {
+//
+//    }
+    
+    @objc func countdown() {
+        dead = tamagotchi.notDead()
+        if dead == false {
+            time += 1
+            if time % 30 == 0 {
+                tamagotchi.incrementAge()
+            }
+            if time % 5 == 0 {
+                tamagotchi.decrementHappiness()
+            }
+            if time % 3 == 0 {
+                tamagotchi.decrementHunger()
+            }
+            updateDisplay()
+        } else {
+            timer?.invalidate()
+            
+        }
     }
 }
 

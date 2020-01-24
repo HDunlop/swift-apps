@@ -16,9 +16,7 @@ class Tamagotchi {
     var hunger: Int = 0
     var happiness: Int = 100
     var name: String
-    var ill: Bool = false
     var health: Int = 100
-    var needsAttention: Bool = false
     var isAsleep: Bool = false
 
     init(name: String) {
@@ -37,12 +35,11 @@ class Tamagotchi {
             
         """)
     }
-    
+
     func eat() {
         self.weight += 5
         self.hunger -= 20
         self.happiness += 20
-        self.needsAttention = false
         self.health -= 10
     }
 
@@ -63,8 +60,16 @@ class Tamagotchi {
         self.health += 15
     }
     
-    func setAge(age: Int) {
-        self.age = age
+    func incrementAge() {
+        self.age += 1
+    }
+    
+    func decrementHappiness() {
+        self.happiness -= 5
+    }
+    
+    func decrementHunger() {
+        self.hunger += 10
     }
     
     func notDead() -> Bool {
@@ -78,6 +83,4 @@ class Tamagotchi {
             return false
         }
     }
-    
-    func killedYou() -> Bool {
 }

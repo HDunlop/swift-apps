@@ -20,10 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet var CarStatistics: UILabel!
     @IBOutlet var timeRemainingLabel: UILabel!
     
-//    button which stops timer and locks the screen before timer hits 0
-//    or
-//    displays final stats when timer hits 0
-    
     var timeRemaining = 60
     var timer: Timer?
     var stop = false

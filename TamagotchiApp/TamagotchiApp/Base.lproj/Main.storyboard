@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,59 +16,98 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-ys-IW0">
-                                <rect key="frame" x="20" y="44" width="374" height="346"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="86p-yM-SWX"/>
-                                    <constraint firstAttribute="height" constant="346" id="zRs-C6-Hdg"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="90" width="374" height="300"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M6-Ve-eqa">
-                                <rect key="frame" x="20" y="398" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M6-Ve-eqa">
+                                <rect key="frame" x="190" y="405.5" width="34" height="30"/>
                                 <state key="normal" title="Feed"/>
                                 <connections>
                                     <action selector="feedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Day-3L-l5H"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-15-07Z">
-                                <rect key="frame" x="20" y="436" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-15-07Z">
+                                <rect key="frame" x="159.5" y="446" width="95" height="30"/>
                                 <state key="normal" title="Beat the child"/>
                                 <connections>
                                     <action selector="beatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fA-ih-5Ka"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-6f-JBl">
-                                <rect key="frame" x="20" y="474" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-6f-JBl">
+                                <rect key="frame" x="158.5" y="486.5" width="97" height="30"/>
                                 <state key="normal" title="Give Medicine"/>
                                 <connections>
                                     <action selector="giveMedicineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdi-oU-h1B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-4h-PJf">
-                                <rect key="frame" x="20" y="512" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-4h-PJf">
+                                <rect key="frame" x="170.5" y="527" width="73" height="30"/>
                                 <state key="normal" title="Play Game"/>
                                 <connections>
                                     <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uEW-td-pPd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emC-y0-U1r">
+                                <rect key="frame" x="271.5" y="54" width="122.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYq-ur-qyn">
+                                <rect key="frame" x="46" y="112" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Shit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ove-zB-E6e">
+                                <rect key="frame" x="317" y="310" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Shit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf5-aP-iwJ">
+                                <rect key="frame" x="136" y="709" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vomit"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vFa-15-07Z" secondAttribute="trailing" constant="20" id="1fk-mq-Ndz"/>
                             <constraint firstItem="RiB-ys-IW0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6xw-Mj-2ce"/>
-                            <constraint firstItem="RiB-ys-IW0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Hvc-3D-M0f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qw7-4h-PJf" secondAttribute="trailing" constant="20" id="Aup-YC-vNM"/>
+                            <constraint firstItem="4M6-Ve-eqa" firstAttribute="top" secondItem="RiB-ys-IW0" secondAttribute="baseline" constant="20" id="Ccb-vx-zWF"/>
                             <constraint firstItem="RiB-ys-IW0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Jrr-JV-qwF"/>
+                            <constraint firstItem="vFa-15-07Z" firstAttribute="top" secondItem="4M6-Ve-eqa" secondAttribute="baseline" constant="20" id="KDs-Yp-QgM"/>
+                            <constraint firstItem="RiB-ys-IW0" firstAttribute="top" secondItem="emC-y0-U1r" secondAttribute="firstBaseline" constant="20" id="QOF-OO-RaE"/>
+                            <constraint firstItem="RiB-ys-IW0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qiy-ch-vYX"/>
+                            <constraint firstItem="4M6-Ve-eqa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WaZ-Nc-bwD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emC-y0-U1r" secondAttribute="trailing" constant="20" id="ZTE-Nz-rUP"/>
+                            <constraint firstItem="MFX-6f-JBl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bdT-Zk-spq"/>
+                            <constraint firstItem="vFa-15-07Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dnC-YA-iBC"/>
                             <constraint firstAttribute="bottomMargin" secondItem="RiB-ys-IW0" secondAttribute="bottom" constant="472" id="eba-Ad-uSu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MFX-6f-JBl" secondAttribute="trailing" constant="20" id="fhE-M0-LFj"/>
+                            <constraint firstItem="MFX-6f-JBl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j2n-sj-wFP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4M6-Ve-eqa" secondAttribute="trailing" constant="20" id="jyc-Sw-6DK"/>
+                            <constraint firstItem="4M6-Ve-eqa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kZq-f3-fOp"/>
+                            <constraint firstItem="qw7-4h-PJf" firstAttribute="top" secondItem="MFX-6f-JBl" secondAttribute="baseline" constant="20" id="kr6-J2-5b0"/>
+                            <constraint firstItem="vFa-15-07Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lmm-w3-5D1"/>
+                            <constraint firstItem="qw7-4h-PJf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="m2s-ty-92j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RiB-ys-IW0" secondAttribute="trailing" constant="20" id="tDg-6x-kFo"/>
+                            <constraint firstItem="emC-y0-U1r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="upL-0A-DX0"/>
+                            <constraint firstItem="RiB-ys-IW0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vGY-Ow-fXw"/>
+                            <constraint firstItem="qw7-4h-PJf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vLs-ro-tF6"/>
+                            <constraint firstItem="MFX-6f-JBl" firstAttribute="top" secondItem="vFa-15-07Z" secondAttribute="baseline" constant="20" id="wF9-5k-Rci"/>
+                            <constraint firstItem="emC-y0-U1r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zSo-3I-Sq0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="shit1Outlet" destination="gYq-ur-qyn" id="ryb-uf-pQ2"/>
+                        <outlet property="shit2Outlet" destination="Ove-zB-E6e" id="8yI-IW-1eJ"/>
                         <outlet property="statsLabel" destination="RiB-ys-IW0" id="wbO-iH-aE2"/>
+                        <outlet property="timeLabel" destination="emC-y0-U1r" id="4VC-Iq-Y9e"/>
+                        <outlet property="vomitOutlet" destination="Uf5-aP-iwJ" id="tXo-KU-HFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
