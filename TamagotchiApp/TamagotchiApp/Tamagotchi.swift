@@ -50,7 +50,7 @@ class Tamagotchi {
             }
         }
     }
-
+    
     func eatMeal() {
         self.weight += 3
         self.hunger = doMaths(control: self.hunger, operand: "-", value: 10)
@@ -64,12 +64,12 @@ class Tamagotchi {
         self.happiness = doMaths(control: self.happiness, operand: "+", value: 6)
         self.health = doMaths(control: self.health, operand: "-", value: 5)
     }
-
+    
     func train() {
         self.discipline = doMaths(control: self.discipline, operand: "+", value: 20)
         self.happiness = doMaths(control: self.happiness, operand: "-", value: 15)
     }
-
+    
     func giveMedicine() {
         self.health = doMaths(control: self.health, operand: "+", value: 20)
         self.happiness = doMaths(control: self.happiness, operand: "-", value: 15)
@@ -93,6 +93,12 @@ class Tamagotchi {
     
     func decrementHappiness() {
         self.happiness = doMaths(control: self.happiness, operand: "-", value: 5)
+        self.health = doMaths(control: self.health, operand: "+", value: 15)
+        self.discipline = doMaths(control: self.discipline, operand: "-", value: 15)
+    }
+    
+    func addAge() {
+        self.age += 1
     }
     
     func decrementHunger() {
@@ -109,7 +115,7 @@ class Tamagotchi {
     
     func notDead() -> [String] {
         if happiness == 0 {
-    return ["y", "Happiness", "Your alien orphan killed itself because it was so sad"]
+            return ["y", "Happiness", "Your alien orphan killed itself because it was so sad"]
         } else if weight == 0 {
             return ["y", "Weight", "You starved your off-planet scum"]
         } else if weight >= 50 {
@@ -138,4 +144,5 @@ class Tamagotchi {
             return 0
         }
     }
+    
 }
