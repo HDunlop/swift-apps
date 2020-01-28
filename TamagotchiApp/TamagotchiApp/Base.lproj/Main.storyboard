@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,41 +16,78 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-ys-IW0">
-                                <rect key="frame" x="20" y="90" width="374" height="300"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="90.333333333333343" width="374" height="299.66666666666663"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M6-Ve-eqa">
-                                <rect key="frame" x="190" y="405.5" width="34" height="30"/>
-                                <state key="normal" title="Feed"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4M6-Ve-eqa">
+                                <rect key="frame" x="101.66666666666669" y="402.66666666666669" width="211" height="40.666666666666686"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Feed the alien orphan a meal">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="feedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Day-3L-l5H"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-15-07Z">
-                                <rect key="frame" x="159.5" y="446" width="95" height="30"/>
-                                <state key="normal" title="Beat the child"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-15-07Z">
+                                <rect key="frame" x="155.66666666666666" y="500.33333333333331" width="102.99999999999997" height="40.666666666666686"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Beat the child">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="beatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fA-ih-5Ka"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-6f-JBl">
-                                <rect key="frame" x="158.5" y="486.5" width="97" height="30"/>
-                                <state key="normal" title="Give Medicine"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-6f-JBl">
+                                <rect key="frame" x="154.66666666666666" y="549.33333333333337" width="104.99999999999997" height="40.666666666666629"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Give Medicine">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                <font key="NSOriginalFont" size="18" name="Noteworthy-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="giveMedicineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdi-oU-h1B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-4h-PJf">
-                                <rect key="frame" x="170.5" y="527" width="73" height="30"/>
-                                <state key="normal" title="Play Game"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-4h-PJf">
+                                <rect key="frame" x="165.66666666666666" y="598" width="83" height="40.666666666666629"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Play Game">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uEW-td-pPd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emC-y0-U1r">
-                                <rect key="frame" x="271.5" y="54" width="122.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Survived" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emC-y0-U1r">
+                                <rect key="frame" x="285" y="54" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,34 +96,64 @@
                                 <rect key="frame" x="46" y="112" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Shit"/>
+                                <connections>
+                                    <action selector="shit1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fq4-V4-QaT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ove-zB-E6e">
                                 <rect key="frame" x="317" y="310" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Shit"/>
+                                <connections>
+                                    <action selector="shit2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugh-eg-yh5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf5-aP-iwJ">
                                 <rect key="frame" x="136" y="709" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Vomit"/>
+                                <connections>
+                                    <action selector="vomitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jkJ-Df-tt3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-U6-1BX">
+                                <rect key="frame" x="26" y="451.66666666666669" width="362" height="40.666666666666686"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Give it a snack because it doesn't deserve a meal">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                <font key="NSOriginalFont" size="18" name="Noteworthy-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="feedSnackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8t4-bI-MO1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vFa-15-07Z" secondAttribute="trailing" constant="20" id="1fk-mq-Ndz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QLh-U6-1BX" secondAttribute="trailing" constant="20" id="3T8-jJ-Xe1"/>
                             <constraint firstItem="RiB-ys-IW0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6xw-Mj-2ce"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qw7-4h-PJf" secondAttribute="trailing" constant="20" id="Aup-YC-vNM"/>
                             <constraint firstItem="4M6-Ve-eqa" firstAttribute="top" secondItem="RiB-ys-IW0" secondAttribute="baseline" constant="20" id="Ccb-vx-zWF"/>
                             <constraint firstItem="RiB-ys-IW0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Jrr-JV-qwF"/>
-                            <constraint firstItem="vFa-15-07Z" firstAttribute="top" secondItem="4M6-Ve-eqa" secondAttribute="baseline" constant="20" id="KDs-Yp-QgM"/>
                             <constraint firstItem="RiB-ys-IW0" firstAttribute="top" secondItem="emC-y0-U1r" secondAttribute="firstBaseline" constant="20" id="QOF-OO-RaE"/>
+                            <constraint firstItem="QLh-U6-1BX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qbe-7D-ICO"/>
                             <constraint firstItem="RiB-ys-IW0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qiy-ch-vYX"/>
                             <constraint firstItem="4M6-Ve-eqa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WaZ-Nc-bwD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emC-y0-U1r" secondAttribute="trailing" constant="20" id="ZTE-Nz-rUP"/>
                             <constraint firstItem="MFX-6f-JBl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bdT-Zk-spq"/>
+                            <constraint firstItem="vFa-15-07Z" firstAttribute="top" secondItem="QLh-U6-1BX" secondAttribute="baseline" constant="20" id="dIT-BO-hpd"/>
                             <constraint firstItem="vFa-15-07Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dnC-YA-iBC"/>
                             <constraint firstAttribute="bottomMargin" secondItem="RiB-ys-IW0" secondAttribute="bottom" constant="472" id="eba-Ad-uSu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MFX-6f-JBl" secondAttribute="trailing" constant="20" id="fhE-M0-LFj"/>
+                            <constraint firstItem="QLh-U6-1BX" firstAttribute="top" secondItem="4M6-Ve-eqa" secondAttribute="baseline" constant="20" id="hFc-kW-ejq"/>
+                            <constraint firstItem="QLh-U6-1BX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iqN-Xk-VoL"/>
                             <constraint firstItem="MFX-6f-JBl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j2n-sj-wFP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4M6-Ve-eqa" secondAttribute="trailing" constant="20" id="jyc-Sw-6DK"/>
                             <constraint firstItem="4M6-Ve-eqa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kZq-f3-fOp"/>
@@ -103,8 +170,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="beatOutlet" destination="vFa-15-07Z" id="3qh-3P-B15"/>
+                        <outlet property="gameOutlet" destination="qw7-4h-PJf" id="9nH-6Z-v7u"/>
+                        <outlet property="mealOutlet" destination="4M6-Ve-eqa" id="sZY-AC-ZCe"/>
+                        <outlet property="medicineOutlet" destination="MFX-6f-JBl" id="qep-N3-s5w"/>
                         <outlet property="shit1Outlet" destination="gYq-ur-qyn" id="ryb-uf-pQ2"/>
                         <outlet property="shit2Outlet" destination="Ove-zB-E6e" id="8yI-IW-1eJ"/>
+                        <outlet property="snackOutlet" destination="QLh-U6-1BX" id="Ta7-cT-dHr"/>
                         <outlet property="statsLabel" destination="RiB-ys-IW0" id="wbO-iH-aE2"/>
                         <outlet property="timeLabel" destination="emC-y0-U1r" id="4VC-Iq-Y9e"/>
                         <outlet property="vomitOutlet" destination="Uf5-aP-iwJ" id="tXo-KU-HFj"/>
