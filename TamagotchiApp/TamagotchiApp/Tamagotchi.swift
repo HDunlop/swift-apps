@@ -11,13 +11,12 @@ import Foundation
 class Tamagotchi {
 
     var age: Int = 0
-    var weight: Int = 0
-    var discipline: Int = 0
+    var weight: Int = 5
+    var discipline: Int = 50
     var hunger: Int = 0
     var happiness: Int = 100
     var name: String
     var health: Int = 100
-    var isAsleep: Bool = false
 
     init(name: String) {
         self.name = name
@@ -35,29 +34,57 @@ class Tamagotchi {
             
         """)
     }
+    
+    func doMaths(control: Int, operand: String, value: Int) -> Int {
+        if operand == "+" {
+            if control + value > 100 {
+                return 100
+            } else {
+                return (control + value)
+            }
+        } else {
+            if control - value < 0 {
+                return 0
+            } else {
+                return (control - value)
+            }
+        }
+    }
 
-    func eat() {
-        self.weight += 5
-        self.hunger -= 20
-        self.happiness += 20
-        self.health -= 10
+    func eatMeal() {
+        self.weight += 3
+        self.hunger = doMaths(control: self.hunger, operand: "-", value: 10)
+        self.happiness = doMaths(control: self.happiness, operand: "+", value: 10)
+        self.health = doMaths(control: self.health, operand: "-", value: 5)
+    }
+    
+    func eatSnack() {
+        self.weight += 1
+        self.hunger = doMaths(control: self.hunger, operand: "-", value: 5)
+        self.happiness = doMaths(control: self.happiness, operand: "+", value: 6)
+        self.health = doMaths(control: self.health, operand: "-", value: 5)
     }
 
     func train() {
-        self.discipline += 20
-        self.happiness -= 15
+        self.discipline = doMaths(control: self.discipline, operand: "+", value: 20)
+        self.happiness = doMaths(control: self.happiness, operand: "-", value: 15)
     }
 
     func giveMedicine() {
-        self.health += 20
-        self.happiness -= 15
+        self.health = doMaths(control: self.health, operand: "+", value: 20)
+        self.happiness = doMaths(control: self.happiness, operand: "-", value: 15)
     }
     
     func playGame() {
-        self.happiness += 30
-        self.hunger += 20
-        self.weight -= 2
-        self.health += 15
+        self.happiness = doMaths(control: self.happiness, operand: "+", value: 30)
+        self.hunger = doMaths(control: self.hunger, operand: "+", value: 20)
+        if self.weight - 2 < 0 {
+            self.weight = 0
+        } else {
+            self.weight -= 2
+        }
+        self.health = doMaths(control: self.health, operand: "+", value: 15)
+        self.discipline = doMaths(control: self.discipline, operand: "-", value: 15)
     }
     
     func incrementAge() {
@@ -65,22 +92,50 @@ class Tamagotchi {
     }
     
     func decrementHappiness() {
-        self.happiness -= 5
+        self.happiness = doMaths(control: self.happiness, operand: "-", value: 5)
     }
     
     func decrementHunger() {
-        self.hunger += 10
+        self.hunger = doMaths(control: self.hunger, operand: "+", value: 10)
     }
     
-    func notDead() -> Bool {
+    func decrementWeight() {
+        if self.weight - 6 < 0 {
+            self.weight = 0
+        } else {
+            self.weight -= 6
+        }
+    }
+    
+    func notDead() -> [String] {
         if happiness == 0 {
-            return true
-        } else if weight == 100 {
-            return true
+    return ["y", "Happiness", "Your alien orphan killed itself because it was so sad"]
+        } else if weight == 0 {
+            return ["y", "Weight", "You starved your off-planet scum"]
+        } else if weight >= 50 {
+            return ["y", "Weight", "The pitiful child was overfed to the point of death"]
         } else if health == 0 {
+            return ["y", "Health", "Died of health reasons as a result of neglect"]
+        } else {
+            return ["n"]
+        }
+    }
+    
+    func isItSick() -> Bool {
+        if health == 15 {
             return true
         } else {
             return false
+        }
+    }
+    
+    func pooValue() -> Int {
+        if discipline <= 20 {
+            return 2
+        } else if discipline <= 40 {
+            return 1
+        } else {
+            return 0
         }
     }
 }
