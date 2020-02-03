@@ -11,8 +11,8 @@ import Foundation
 class DivisionFactory {
     
     static func createDivision(code: String, of size: Int) -> Division {
-        let division = Division(code: code, size: size)
-        for i in 0...(size - 1) {
+        let division = Division(code: code)
+        for i in 0 ..< size {
             division.addStudent(forename: "Sbeve\(i)", surname: "Boomer")
         }
         return division
