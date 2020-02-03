@@ -37,6 +37,17 @@ class ViewController: UITableViewController {
         updateDateDisplay()
     }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DivisionAbsenceViewController")
+            as? DivisionAbsenceTableViewController else {
+                fatalError("Failed to load DivisionAbecneTableViewController from Storyboard")
+        }
+        
+        vc.division = divisions[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return divisions.count
     }

@@ -13,7 +13,7 @@ class DivisionFactory {
     static func createDivision(code: String, of size: Int) -> Division {
         let division = Division(code: code)
         for i in 0 ..< size {
-            division.addStudent(forename: "Sbeve\(i)", surname: "Boomer")
+            division.addStudent(forename: "Sbeve\(i)", surname: "Boomer\(i)")
         }
         return division
     }
