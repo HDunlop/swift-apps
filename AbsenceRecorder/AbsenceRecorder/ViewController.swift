@@ -16,14 +16,6 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDivisions()
-        for division in divisions {
-            print("This division is called \(division.code)")
-            print("The max number of students in this division is \(division.students.count)")
-            for student in division.students {
-                print("     \(student.forename) \(student.surname)")
-//                born on \(student.birthDate)
-            }
-        }
         updateDateDisplay()
     }
     
@@ -39,11 +31,21 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "DivisionAbsenceViewController")
-            as? DivisionAbsenceTableViewController else {
-                fatalError("Failed to load DivisionAbecneTableViewController from Storyboard")
+        as? DivisionAbsenceTableViewController else {
+            fatalError("Failed to load DivisionAbecneTableViewController from Storyboard")
         }
         
-        vc.division = divisions[indexPath.row]
+        let selectedDivision = divisions[indexPath.row]
+        
+        if let existingAbsence = selectedDivision.getAbsence(for: currentDate) {
+            vc.absence = existingAbsence
+        } else {
+            let newAbsence = Absence(date: currentDate)
+            selectedDivision.absences.append(newAbsence)
+            vc.absence = newAbsence
+        }
+        
+        vc.division = selectedDivision
         
         navigationController?.pushViewController(vc, animated: true)
     }
