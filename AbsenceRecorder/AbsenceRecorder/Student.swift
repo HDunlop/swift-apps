@@ -11,11 +11,9 @@ import Foundation
 class Student {
     let forename: String
     let surname: String
-//    let birthDate: Date
     
     init(forename: String, surname: String) {
         self.forename = forename
         self.surname = surname
-//        self.birthDate = birthDate
     }
 }

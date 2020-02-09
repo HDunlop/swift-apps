@@ -10,9 +10,10 @@
 		4C396DDE23E8CAED00A302F0 /* DivisionAbsenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C396DDD23E8CAEC00A302F0 /* DivisionAbsenceTableViewController.swift */; };
 		4C3D77A223EB453F005AB022 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D77A123EB453F005AB022 /* StudentCell.swift */; };
 		4C3D77A423EB46D3005AB022 /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D77A323EB46D2005AB022 /* Absence.swift */; };
+		4C3F2A7A23F0AF3A0034807A /* DivisionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F2A7923F0AF3A0034807A /* DivisionCell.swift */; };
 		4C68A3DC23E20A670038AC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A3DB23E20A670038AC1C /* AppDelegate.swift */; };
 		4C68A3DE23E20A670038AC1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A3DD23E20A670038AC1C /* SceneDelegate.swift */; };
-		4C68A3E023E20A670038AC1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A3DF23E20A670038AC1C /* ViewController.swift */; };
+		4C68A3E023E20A670038AC1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A3DF23E20A670038AC1C /* HomeViewController.swift */; };
 		4C68A3E323E20A670038AC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C68A3E123E20A670038AC1C /* Main.storyboard */; };
 		4C68A3E523E20A760038AC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C68A3E423E20A760038AC1C /* Assets.xcassets */; };
 		4C68A3E823E20A760038AC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C68A3E623E20A760038AC1C /* LaunchScreen.storyboard */; };
@@ -44,10 +45,11 @@
 		4C396DDD23E8CAEC00A302F0 /* DivisionAbsenceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionAbsenceTableViewController.swift; sourceTree = "<group>"; };
 		4C3D77A123EB453F005AB022 /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
 		4C3D77A323EB46D2005AB022 /* Absence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absence.swift; sourceTree = "<group>"; };
+		4C3F2A7923F0AF3A0034807A /* DivisionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionCell.swift; sourceTree = "<group>"; };
 		4C68A3D823E20A670038AC1C /* AbsenceRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbsenceRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C68A3DB23E20A670038AC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C68A3DD23E20A670038AC1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C68A3DF23E20A670038AC1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C68A3DF23E20A670038AC1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C68A3E223E20A670038AC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C68A3E423E20A760038AC1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C68A3E723E20A760038AC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,7 +115,7 @@
 			children = (
 				4C68A3DB23E20A670038AC1C /* AppDelegate.swift */,
 				4C68A3DD23E20A670038AC1C /* SceneDelegate.swift */,
-				4C68A3DF23E20A670038AC1C /* ViewController.swift */,
+				4C68A3DF23E20A670038AC1C /* HomeViewController.swift */,
 				4C68A3E123E20A670038AC1C /* Main.storyboard */,
 				4C68A3E423E20A760038AC1C /* Assets.xcassets */,
 				4C68A3E623E20A760038AC1C /* LaunchScreen.storyboard */,
@@ -122,6 +124,7 @@
 				4C68A40D23E212410038AC1C /* Division.swift */,
 				4C68A40F23E2132B0038AC1C /* DivisionFactory.swift */,
 				4C396DDD23E8CAEC00A302F0 /* DivisionAbsenceTableViewController.swift */,
+				4C3F2A7923F0AF3A0034807A /* DivisionCell.swift */,
 				4C3D77A123EB453F005AB022 /* StudentCell.swift */,
 				4C3D77A323EB46D2005AB022 /* Absence.swift */,
 			);
@@ -278,13 +281,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3D77A423EB46D3005AB022 /* Absence.swift in Sources */,
-				4C68A3E023E20A670038AC1C /* ViewController.swift in Sources */,
+				4C68A3E023E20A670038AC1C /* HomeViewController.swift in Sources */,
 				4C68A3DC23E20A670038AC1C /* AppDelegate.swift in Sources */,
 				4C68A40E23E212410038AC1C /* Division.swift in Sources */,
 				4C3D77A223EB453F005AB022 /* StudentCell.swift in Sources */,
 				4C68A3DE23E20A670038AC1C /* SceneDelegate.swift in Sources */,
 				4C68A40C23E211C50038AC1C /* Student.swift in Sources */,
 				4C68A41023E2132B0038AC1C /* DivisionFactory.swift in Sources */,
+				4C3F2A7A23F0AF3A0034807A /* DivisionCell.swift in Sources */,
 				4C396DDE23E8CAED00A302F0 /* DivisionAbsenceTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

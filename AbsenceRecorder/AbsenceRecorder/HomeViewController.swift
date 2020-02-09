@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
-
+class HomeViewController: UITableViewController {
     var divisions: [Division] = []
-    var currentDate: Date = Date()
+    var currentDate : Date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +21,7 @@ class ViewController: UITableViewController {
     @IBAction func previousDayButton(_ sender: Any) {
         currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate) ?? Date()
         updateDateDisplay()
+        
     }
     
     @IBAction func nextDayButton(_ sender: Any) {
@@ -30,22 +30,20 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DivisionAbsenceViewController")
-        as? DivisionAbsenceTableViewController else {
-            fatalError("Failed to load DivisionAbecneTableViewController from Storyboard")
-        }
-        
         let selectedDivision = divisions[indexPath.row]
         
+        var absence = Absence(date: currentDate)
         if let existingAbsence = selectedDivision.getAbsence(for: currentDate) {
-            vc.absence = existingAbsence
+            absence = existingAbsence
         } else {
-            let newAbsence = Absence(date: currentDate)
-            selectedDivision.absences.append(newAbsence)
-            vc.absence = newAbsence
+            selectedDivision.absences.append(absence)
         }
         
-        vc.division = selectedDivision
+        guard let vc = storyboard?.instantiateViewController(identifier: "DivisionAbsenceViewController", creator: { coder in
+            return DivisionAbsenceTableViewController(coder: coder, division: selectedDivision, absence: absence)
+        }) else {
+            fatalError("Failed to load DivisionAbsenceTableViewController from Storyboard")
+        }
         
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -57,7 +55,8 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Division", for: indexPath)
         
-        cell.textLabel?.text = divisions[indexPath.row].code
+        let  selectedDivision = divisions[indexPath.row]
+        cell.textLabel?.text = selectedDivision.code
         
         return cell
     }

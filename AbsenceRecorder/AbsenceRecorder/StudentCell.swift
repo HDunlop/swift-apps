@@ -16,5 +16,4 @@ class StudentCell: UITableViewCell {
         self.accessoryType = selected ? .checkmark : .none
         self.selectionStyle = .none
     }
-
 }
