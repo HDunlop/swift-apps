@@ -18,10 +18,13 @@ class HomeViewController: UITableViewController {
         updateDateDisplay()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     @IBAction func previousDayButton(_ sender: Any) {
         currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate) ?? Date()
         updateDateDisplay()
-        
     }
     
     @IBAction func nextDayButton(_ sender: Any) {
@@ -30,6 +33,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
         let selectedDivision = divisions[indexPath.row]
         
         var absence = Absence(date: currentDate)
@@ -48,6 +52,19 @@ class HomeViewController: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let allPresent = UIContextualAction(style: .normal, title: "All Present") { action, view, completionHandler in
+            let division = self.divisions[indexPath.row]
+            let absence = Absence(date: self.currentDate, present: division.students)
+            division.absences.append(absence)
+            tableView.reloadData()
+            completionHandler(true)
+        }
+        
+        allPresent.backgroundColor = UIColor.systemPink
+        return UISwipeActionsConfiguration(actions: [allPresent])
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return divisions.count
     }
@@ -57,6 +74,10 @@ class HomeViewController: UITableViewController {
         
         let  selectedDivision = divisions[indexPath.row]
         cell.textLabel?.text = selectedDivision.code
+        
+        if let _ = selectedDivision.getAbsence(for: self.currentDate) {
+            cell.accessoryType = .checkmark
+        }
         
         return cell
     }
@@ -71,5 +92,6 @@ class HomeViewController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         navigationItem.title = formatter.string(from: currentDate)
+        tableView.reloadData()
     }
 }
