@@ -17,6 +17,7 @@
 		31963F9023F2BA4500C85E87 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F8F23F2BA4500C85E87 /* CommentCardWriterUITests.swift */; };
 		31963F9E23F2BAA600C85E87 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F9D23F2BAA600C85E87 /* Division.swift */; };
 		31963FA023F2BBD600C85E87 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F9F23F2BBD600C85E87 /* Comment.swift */; };
+		31963FA223F2BE7800C85E87 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963FA123F2BE7800C85E87 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		31963F9123F2BA4500C85E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31963F9D23F2BAA600C85E87 /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
 		31963F9F23F2BBD600C85E87 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		31963FA123F2BE7800C85E87 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				31963F6D23F2BA4400C85E87 /* AppDelegate.swift */,
 				31963F6F23F2BA4400C85E87 /* SceneDelegate.swift */,
 				31963F7123F2BA4400C85E87 /* HomeViewController.swift */,
+				31963FA123F2BE7800C85E87 /* QuizViewController.swift */,
 				31963F9D23F2BAA600C85E87 /* Division.swift */,
 				31963F9F23F2BBD600C85E87 /* Comment.swift */,
 				31963F7323F2BA4400C85E87 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				31963FA023F2BBD600C85E87 /* Comment.swift in Sources */,
 				31963F7223F2BA4400C85E87 /* HomeViewController.swift in Sources */,
 				31963F6E23F2BA4400C85E87 /* AppDelegate.swift in Sources */,
+				31963FA223F2BE7800C85E87 /* QuizViewController.swift in Sources */,
 				31963F9E23F2BAA600C85E87 /* Division.swift in Sources */,
 				31963F7023F2BA4400C85E87 /* SceneDelegate.swift in Sources */,
 			);

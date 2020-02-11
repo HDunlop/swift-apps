@@ -36,6 +36,19 @@ class HomeViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedDivision = divisions[indexPath.row]
+        
+        guard let vc = storyboard?.instantiateViewController(identifier: "", creator: { coder in
+            return ...
+        }) else {
+            fatalError("Failure to load quiz view controller from storyboard")
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
