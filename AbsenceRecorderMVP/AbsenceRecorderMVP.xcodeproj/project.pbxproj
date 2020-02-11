@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		31963EF023F2B3D100C85E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963EEF23F2B3D100C85E87 /* AppDelegate.swift */; };
 		31963EF223F2B3D100C85E87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963EF123F2B3D100C85E87 /* SceneDelegate.swift */; };
-		31963EF423F2B3D100C85E87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963EF323F2B3D100C85E87 /* ViewController.swift */; };
+		31963EF423F2B3D100C85E87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963EF323F2B3D100C85E87 /* HomeViewController.swift */; };
 		31963EF723F2B3D100C85E87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31963EF523F2B3D100C85E87 /* Main.storyboard */; };
 		31963EF923F2B3D200C85E87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31963EF823F2B3D200C85E87 /* Assets.xcassets */; };
 		31963EFC23F2B3D200C85E87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31963EFA23F2B3D200C85E87 /* LaunchScreen.storyboard */; };
 		31963F0723F2B3D200C85E87 /* AbsenceRecorderMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F0623F2B3D200C85E87 /* AbsenceRecorderMVPTests.swift */; };
 		31963F1223F2B3D200C85E87 /* AbsenceRecorderMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F1123F2B3D200C85E87 /* AbsenceRecorderMVPUITests.swift */; };
+		31963F2023F2B40B00C85E87 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F1F23F2B40B00C85E87 /* Division.swift */; };
+		31963F2423F2B4D100C85E87 /* CommentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F2323F2B4D100C85E87 /* CommentCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		31963EEC23F2B3D100C85E87 /* AbsenceRecorderMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbsenceRecorderMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31963EEF23F2B3D100C85E87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31963EF123F2B3D100C85E87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31963EF323F2B3D100C85E87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31963EF323F2B3D100C85E87 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		31963EF623F2B3D100C85E87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31963EF823F2B3D200C85E87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31963EFB23F2B3D200C85E87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		31963F0D23F2B3D200C85E87 /* AbsenceRecorderMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbsenceRecorderMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31963F1123F2B3D200C85E87 /* AbsenceRecorderMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceRecorderMVPUITests.swift; sourceTree = "<group>"; };
 		31963F1323F2B3D200C85E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31963F1F23F2B40B00C85E87 /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
+		31963F2323F2B4D100C85E87 /* CommentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				31963EEF23F2B3D100C85E87 /* AppDelegate.swift */,
 				31963EF123F2B3D100C85E87 /* SceneDelegate.swift */,
-				31963EF323F2B3D100C85E87 /* ViewController.swift */,
+				31963EF323F2B3D100C85E87 /* HomeViewController.swift */,
 				31963EF523F2B3D100C85E87 /* Main.storyboard */,
 				31963EF823F2B3D200C85E87 /* Assets.xcassets */,
 				31963EFA23F2B3D200C85E87 /* LaunchScreen.storyboard */,
 				31963EFD23F2B3D200C85E87 /* Info.plist */,
+				31963F1F23F2B40B00C85E87 /* Division.swift */,
+				31963F2323F2B4D100C85E87 /* CommentCard.swift */,
 			);
 			path = AbsenceRecorderMVP;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31963EF423F2B3D100C85E87 /* ViewController.swift in Sources */,
+				31963EF423F2B3D100C85E87 /* HomeViewController.swift in Sources */,
+				31963F2423F2B4D100C85E87 /* CommentCard.swift in Sources */,
 				31963EF023F2B3D100C85E87 /* AppDelegate.swift in Sources */,
+				31963F2023F2B40B00C85E87 /* Division.swift in Sources */,
 				31963EF223F2B3D100C85E87 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

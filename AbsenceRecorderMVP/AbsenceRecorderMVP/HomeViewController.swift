@@ -15,7 +15,6 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDivisions()
-        tableView.reloadData()
     }
     
     func setDivisions() {

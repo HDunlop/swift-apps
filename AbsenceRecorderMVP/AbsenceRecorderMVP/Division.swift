@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class Division {
+    
+    var code: String
+    var teacher: String
+    
+    init(code: String, teacher: String) {
+        self.code = code
+        self.teacher = teacher
+    }
+}
