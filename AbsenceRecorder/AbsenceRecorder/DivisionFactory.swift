@@ -10,8 +10,8 @@ import Foundation
 
 class DivisionFactory {
     
-    static func createDivision(code: String, of size: Int) -> Division {
-        let division = Division(code: code)
+    static func createDivision(code: String, teacher: String, of size: Int) -> Division {
+        let division = Division(code: code, teacher: teacher)
         for i in 0 ..< size {
             division.addStudent(forename: "Sbeve\(i)", surname: "Boomer\(i)")
         }

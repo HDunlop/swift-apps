@@ -13,9 +13,11 @@ class Division {
     let code: String
     var students: [Student] = []
     var absences: [Absence] = []
+    var teacher: String
     
-    init(code: String) {
+    init(code: String, teacher: String) {
         self.code = code
+        self.teacher = teacher
     }
     
     func addStudent(forename: String, surname: String) {

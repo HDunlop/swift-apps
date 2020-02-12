@@ -16,6 +16,7 @@ class HomeViewController: UITableViewController {
         super.viewDidLoad()
         setDivisions()
         updateDateDisplay()
+        configureUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +31,11 @@ class HomeViewController: UITableViewController {
     @IBAction func nextDayButton(_ sender: Any) {
         currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate) ?? Date()
         updateDateDisplay()
+    }
+    
+    func configureUI() {
+        navigationController?.navigationBar.barTintColor = .cyan
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -60,9 +66,16 @@ class HomeViewController: UITableViewController {
             tableView.reloadData()
             completionHandler(true)
         }
+        let clearAbsence = UIContextualAction(style: .normal, title: "Clear Absence") { action, view, completionHandler in
+            let division = self.divisions[indexPath.row]
+            division.absences.removeAll {$0.takenOn == self.currentDate}
+            tableView.reloadData()
+            completionHandler(true)
+        }
         
-        allPresent.backgroundColor = UIColor.systemPink
-        return UISwipeActionsConfiguration(actions: [allPresent])
+        allPresent.backgroundColor = .cyan
+        clearAbsence.backgroundColor = .systemGray
+        return UISwipeActionsConfiguration(actions: [allPresent, clearAbsence])
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,18 +87,22 @@ class HomeViewController: UITableViewController {
         
         let  selectedDivision = divisions[indexPath.row]
         cell.textLabel?.text = selectedDivision.code
+        cell.detailTextLabel?.text = selectedDivision.teacher
         
         if let _ = selectedDivision.getAbsence(for: self.currentDate) {
             cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
         }
         
         return cell
     }
     
     func setDivisions() {
-        divisions.append(DivisionFactory.createDivision(code: "vCW-1", of: 9))
-        divisions.append(DivisionFactory.createDivision(code: "pCX-1", of: 10))
-        divisions.append(DivisionFactory.createDivision(code: "MCV3-3 Pure", of: 8))
+        divisions.append(DivisionFactory.createDivision(code: "vCW-1", teacher: "Mr. Coormell", of: 9))
+        divisions.append(DivisionFactory.createDivision(code: "pCX-1", teacher: "Mr. Mann", of: 10))
+        divisions.append(DivisionFactory.createDivision(code: "MCV3-3 Pure", teacher: "Mrs. Squires-Parkin", of: 8))
+        divisions.append(DivisionFactory.createDivision(code: "MCV3-3 Applied", teacher: "Dr. Moston", of: 8))
     }
     
     func updateDateDisplay() {
@@ -93,5 +110,6 @@ class HomeViewController: UITableViewController {
         formatter.dateStyle = .medium
         navigationItem.title = formatter.string(from: currentDate)
         tableView.reloadData()
+        configureUI()
     }
 }
