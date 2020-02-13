@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fz6-bI-vBz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fz6-bI-vBz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,22 +106,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="x8t-Au-58H">
-                                <rect key="frame" x="55" y="472" width="305" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="x8t-Au-58H">
+                                <rect key="frame" x="54.5" y="425" width="305" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="305" id="2uo-t6-jiw"/>
-                                    <constraint firstAttribute="height" constant="31" id="BvI-Tc-3Kp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="5yR-2Q-tjD"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
+                                    <segment title="Spend more time on EWs">
+                                        <size key="contentOffset" width="-1" height="0.0"/>
+                                    </segment>
+                                    <segment title="Focus more in class"/>
+                                    <segment title="Make better notes"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much effort do you put in to the subject? 1 is lowest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-E6-mq1">
-                                <rect key="frame" x="65" y="389" width="284" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How could you improve?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-E6-mq1">
+                                <rect key="frame" x="113.5" y="389" width="187" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,15 +135,18 @@
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uYi-kv-zWG" secondAttribute="trailing" constant="65" id="9HZ-kU-DAb"/>
                             <constraint firstItem="s6l-Um-3wz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="9Rs-sJ-gtN"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JEl-Yu-6HN" secondAttribute="trailing" constant="65" id="ALU-8X-WX3"/>
+                            <constraint firstItem="x8t-Au-58H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="Bud-O7-uop"/>
                             <constraint firstItem="q7s-E6-mq1" firstAttribute="top" secondItem="Wm2-u9-HhD" secondAttribute="baseline" constant="50" id="CzB-gF-uuP"/>
                             <constraint firstItem="uYi-kv-zWG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="65" id="DN7-Rz-uww"/>
                             <constraint firstItem="s6l-Um-3wz" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="Id1-SA-gbt"/>
                             <constraint firstItem="O8o-V9-rvQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="LDV-d6-jvp"/>
                             <constraint firstItem="Wm2-u9-HhD" firstAttribute="top" secondItem="uYi-kv-zWG" secondAttribute="baseline" constant="20" id="Lcg-fH-HPh"/>
                             <constraint firstItem="JEl-Yu-6HN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="65" id="MS0-8v-NC6"/>
+                            <constraint firstItem="x8t-Au-58H" firstAttribute="top" secondItem="q7s-E6-mq1" secondAttribute="baseline" constant="20" id="POX-yG-iPM"/>
                             <constraint firstItem="O8o-V9-rvQ" firstAttribute="top" secondItem="Pf0-dp-wvg" secondAttribute="top" id="Tot-wn-cGW"/>
                             <constraint firstItem="JEl-Yu-6HN" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="aVz-AL-ys6"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O8o-V9-rvQ" secondAttribute="trailing" constant="20" id="aoR-Xn-Ldj"/>
+                            <constraint firstItem="x8t-Au-58H" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="e7J-Yj-eKq"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q7s-E6-mq1" secondAttribute="trailing" constant="65" id="hHI-Wz-yVE"/>
                             <constraint firstItem="q7s-E6-mq1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="65" id="hee-fi-Vob"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wm2-u9-HhD" secondAttribute="trailing" constant="20" id="i4S-b5-QgF"/>
@@ -152,6 +155,7 @@
                             <constraint firstItem="O8o-V9-rvQ" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="mZ2-zK-c1G"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s6l-Um-3wz" secondAttribute="trailing" constant="20" id="oAb-Y2-kNy"/>
                             <constraint firstItem="Wm2-u9-HhD" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="pwC-Rr-NDD"/>
+                            <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x8t-Au-58H" secondAttribute="trailing" constant="20" id="vOY-5B-2zQ"/>
                             <constraint firstItem="uYi-kv-zWG" firstAttribute="top" secondItem="s6l-Um-3wz" secondAttribute="baseline" constant="50" id="x3C-HG-aM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pf0-dp-wvg"/>
