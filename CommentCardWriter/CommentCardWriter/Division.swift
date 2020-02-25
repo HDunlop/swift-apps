@@ -12,7 +12,6 @@ class Division {
     
     var code: String
     var teacher: String
-    var comment: Comment?
     
     init(code: String, teacher: String) {
         self.code = code

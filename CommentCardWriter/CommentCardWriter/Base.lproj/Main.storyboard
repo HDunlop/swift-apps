@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fz6-bI-vBz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fz6-bI-vBz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,25 +55,25 @@
         <!--Quiz View Controller-->
         <scene sceneID="LvR-27-Icq">
             <objects>
-                <viewController id="GbS-Xs-R6E" customClass="QuizViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizViewController" id="GbS-Xs-R6E" customClass="QuizViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wyf-PK-x2E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Division" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8o-V9-rvQ">
-                                <rect key="frame" x="177" y="44" width="60" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="164.5" y="64" width="85.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you enjoy the subject? 1 is lowest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEl-Yu-6HN">
-                                <rect key="frame" x="65" y="135" width="284" height="41"/>
+                                <rect key="frame" x="65" y="163" width="284" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="s6l-Um-3wz">
-                                <rect key="frame" x="54.5" y="191.5" width="305" height="32"/>
+                                <rect key="frame" x="54.5" y="219.5" width="305" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="ByW-kQ-Mt1"/>
                                     <constraint firstAttribute="width" constant="305" id="RwX-oQ-Cz8"/>
@@ -85,29 +85,18 @@
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Wm2-u9-HhD">
-                                <rect key="frame" x="54.5" y="318.5" width="305" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="UqF-lD-Hek"/>
-                                    <constraint firstAttribute="width" constant="305" id="iLq-nL-hsq"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
-                                </segments>
+                                <connections>
+                                    <action selector="enjoymentAction:" destination="GbS-Xs-R6E" eventType="valueChanged" id="54Z-7A-9jn"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much effort do you put in to the subject? 1 is lowest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYi-kv-zWG">
-                                <rect key="frame" x="65" y="262" width="284" height="41"/>
+                                <rect key="frame" x="65" y="290" width="284" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="x8t-Au-58H">
-                                <rect key="frame" x="54.5" y="425" width="305" height="65"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="x8t-Au-58H">
+                                <rect key="frame" x="54.5" y="453" width="305" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="305" id="2uo-t6-jiw"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="5yR-2Q-tjD"/>
@@ -119,31 +108,62 @@
                                     <segment title="Focus more in class"/>
                                     <segment title="Make better notes"/>
                                 </segments>
+                                <connections>
+                                    <action selector="improvementAction:" destination="GbS-Xs-R6E" eventType="valueChanged" id="yXt-A1-f9g"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How could you improve?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-E6-mq1">
-                                <rect key="frame" x="113.5" y="389" width="187" height="20.5"/>
+                                <rect key="frame" x="113.5" y="417" width="187" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afk-ym-KiL">
+                                <rect key="frame" x="179.5" y="812" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirm:" destination="GbS-Xs-R6E" eventType="touchUpInside" id="0pR-kE-cy0"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Wm2-u9-HhD">
+                                <rect key="frame" x="54.5" y="346.5" width="305" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="UqF-lD-Hek"/>
+                                    <constraint firstAttribute="width" constant="305" id="iLq-nL-hsq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="effortAction:" destination="GbS-Xs-R6E" eventType="valueChanged" id="dla-UE-I5X"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Wm2-u9-HhD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="1C8-Ee-u1C"/>
                             <constraint firstItem="s6l-Um-3wz" firstAttribute="top" secondItem="JEl-Yu-6HN" secondAttribute="baseline" constant="20" id="3hN-Iz-IIV"/>
                             <constraint firstItem="uYi-kv-zWG" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="5nY-wZ-ZWv"/>
+                            <constraint firstItem="Afk-ym-KiL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="5yq-26-dym"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uYi-kv-zWG" secondAttribute="trailing" constant="65" id="9HZ-kU-DAb"/>
                             <constraint firstItem="s6l-Um-3wz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="9Rs-sJ-gtN"/>
+                            <constraint firstItem="Pf0-dp-wvg" firstAttribute="bottom" secondItem="Afk-ym-KiL" secondAttribute="bottom" constant="20" id="9fr-R7-Med"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JEl-Yu-6HN" secondAttribute="trailing" constant="65" id="ALU-8X-WX3"/>
                             <constraint firstItem="x8t-Au-58H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="Bud-O7-uop"/>
                             <constraint firstItem="q7s-E6-mq1" firstAttribute="top" secondItem="Wm2-u9-HhD" secondAttribute="baseline" constant="50" id="CzB-gF-uuP"/>
                             <constraint firstItem="uYi-kv-zWG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="65" id="DN7-Rz-uww"/>
+                            <constraint firstItem="Afk-ym-KiL" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="DOA-ls-lQ1"/>
                             <constraint firstItem="s6l-Um-3wz" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="Id1-SA-gbt"/>
                             <constraint firstItem="O8o-V9-rvQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="20" id="LDV-d6-jvp"/>
+                            <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Afk-ym-KiL" secondAttribute="trailing" constant="20" id="Lce-jS-CdH"/>
                             <constraint firstItem="Wm2-u9-HhD" firstAttribute="top" secondItem="uYi-kv-zWG" secondAttribute="baseline" constant="20" id="Lcg-fH-HPh"/>
                             <constraint firstItem="JEl-Yu-6HN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf0-dp-wvg" secondAttribute="leading" constant="65" id="MS0-8v-NC6"/>
                             <constraint firstItem="x8t-Au-58H" firstAttribute="top" secondItem="q7s-E6-mq1" secondAttribute="baseline" constant="20" id="POX-yG-iPM"/>
-                            <constraint firstItem="O8o-V9-rvQ" firstAttribute="top" secondItem="Pf0-dp-wvg" secondAttribute="top" id="Tot-wn-cGW"/>
+                            <constraint firstItem="O8o-V9-rvQ" firstAttribute="top" secondItem="Pf0-dp-wvg" secondAttribute="top" constant="20" id="Tot-wn-cGW"/>
                             <constraint firstItem="JEl-Yu-6HN" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="aVz-AL-ys6"/>
                             <constraint firstItem="Pf0-dp-wvg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O8o-V9-rvQ" secondAttribute="trailing" constant="20" id="aoR-Xn-Ldj"/>
                             <constraint firstItem="x8t-Au-58H" firstAttribute="centerX" secondItem="Pf0-dp-wvg" secondAttribute="centerX" id="e7J-Yj-eKq"/>
@@ -160,21 +180,66 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pf0-dp-wvg"/>
                     </view>
+                    <connections>
+                        <outlet property="divisionOutlet" destination="O8o-V9-rvQ" id="2YQ-Hk-ynb"/>
+                        <outlet property="effort" destination="Wm2-u9-HhD" id="wJ3-xC-vVU"/>
+                        <outlet property="enjoyment" destination="s6l-Um-3wz" id="Kb5-69-0cU"/>
+                        <outlet property="improvement" destination="x8t-Au-58H" id="lGv-dS-60O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndk-4F-oW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2606" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Comment View Controller-->
         <scene sceneID="AZF-Qx-HtK">
             <objects>
-                <viewController id="i7D-oF-Qqp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentViewController" id="i7D-oF-Qqp" customClass="CommentViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YlW-wY-xuG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-NC-zP5">
+                                <rect key="frame" x="164" y="64" width="86" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Division" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYc-s1-Ab3">
+                                <rect key="frame" x="172.5" y="98" width="69" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSq-0Z-Mob">
+                                <rect key="frame" x="169.5" y="167" width="75" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fSq-0Z-Mob" firstAttribute="top" secondItem="qYc-s1-Ab3" secondAttribute="baseline" constant="50" id="1Et-IC-1Yh"/>
+                            <constraint firstItem="qYc-s1-Ab3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-mT-47z" secondAttribute="leading" constant="20" id="6U6-Ol-AFK"/>
+                            <constraint firstItem="n2e-NC-zP5" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="CFi-Lt-uXf"/>
+                            <constraint firstItem="qYc-s1-Ab3" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="KVQ-Ly-3rr"/>
+                            <constraint firstItem="fSq-0Z-Mob" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-mT-47z" secondAttribute="leading" constant="20" id="OgY-z5-C3Z"/>
+                            <constraint firstItem="n2e-NC-zP5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-mT-47z" secondAttribute="leading" constant="20" id="Q4B-bs-LEd"/>
+                            <constraint firstItem="SdX-mT-47z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fSq-0Z-Mob" secondAttribute="trailing" constant="20" id="UP0-oL-Fex"/>
+                            <constraint firstItem="n2e-NC-zP5" firstAttribute="top" secondItem="SdX-mT-47z" secondAttribute="top" constant="20" id="dG4-yN-Bpu"/>
+                            <constraint firstItem="SdX-mT-47z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n2e-NC-zP5" secondAttribute="trailing" constant="20" id="dRe-o9-GzE"/>
+                            <constraint firstItem="qYc-s1-Ab3" firstAttribute="top" secondItem="n2e-NC-zP5" secondAttribute="baseline" constant="10" id="mlu-N0-ccz"/>
+                            <constraint firstItem="SdX-mT-47z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qYc-s1-Ab3" secondAttribute="trailing" constant="20" id="wcU-On-aDm"/>
+                            <constraint firstItem="fSq-0Z-Mob" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="y0r-CY-8wh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SdX-mT-47z"/>
                     </view>
+                    <connections>
+                        <outlet property="commentLabel" destination="fSq-0Z-Mob" id="ha8-0M-6vm"/>
+                        <outlet property="divisionLabel" destination="qYc-s1-Ab3" id="diF-oY-vWQ"/>
+                        <outlet property="teacher" destination="n2e-NC-zP5" id="e9K-6n-oIW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFG-bM-wbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

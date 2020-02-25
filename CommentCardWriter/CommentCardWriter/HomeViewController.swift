@@ -42,7 +42,7 @@ class HomeViewController: UITableViewController {
         let selectedDivision = divisions[indexPath.row]
         
         guard let vc = storyboard?.instantiateViewController(identifier: "QuizViewController", creator: { coder in
-            return QuizViewController(coder: coder, division: selectedDivision)
+            return QuizViewController(coder, division: selectedDivision)
         }) else {
             fatalError("Failure to load quiz view controller from storyboard")
         }

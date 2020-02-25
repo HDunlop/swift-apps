@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3140FA392405321900B4295F /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140FA382405321900B4295F /* CommentViewController.swift */; };
 		31963F6E23F2BA4400C85E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F6D23F2BA4400C85E87 /* AppDelegate.swift */; };
 		31963F7023F2BA4400C85E87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F6F23F2BA4400C85E87 /* SceneDelegate.swift */; };
 		31963F7223F2BA4400C85E87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31963F7123F2BA4400C85E87 /* HomeViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3140FA382405321900B4295F /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		31963F6A23F2BA4400C85E87 /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31963F6D23F2BA4400C85E87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31963F6F23F2BA4400C85E87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				31963F6F23F2BA4400C85E87 /* SceneDelegate.swift */,
 				31963F7123F2BA4400C85E87 /* HomeViewController.swift */,
 				31963FA123F2BE7800C85E87 /* QuizViewController.swift */,
+				3140FA382405321900B4295F /* CommentViewController.swift */,
 				31963F9D23F2BAA600C85E87 /* Division.swift */,
 				31963F9F23F2BBD600C85E87 /* Comment.swift */,
 				31963F7323F2BA4400C85E87 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3140FA392405321900B4295F /* CommentViewController.swift in Sources */,
 				31963FA023F2BBD600C85E87 /* Comment.swift in Sources */,
 				31963F7223F2BA4400C85E87 /* HomeViewController.swift in Sources */,
 				31963F6E23F2BA4400C85E87 /* AppDelegate.swift in Sources */,
