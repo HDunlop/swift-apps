@@ -33,7 +33,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if error != nil {
                     self.musicRecommendations.text = "Could not perform lookup of location for latitude: \(firstLocation.coordinate.latitude.description)"
                 } else {
-                    self.musicRecommendations.text = "\((placemarks?[0].country)!), \((placemarks?[0].locality)!), \((placemarks?[0].name)!)"
+                    self.musicRecommendations.text = """
+                    \((placemarks?[0].country)!),
+                    \((placemarks?[0].locality)!)
+                    """
                 }
             })
         }
