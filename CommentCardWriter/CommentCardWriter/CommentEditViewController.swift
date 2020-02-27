@@ -1,5 +1,5 @@
 //
-//  Comment.swift
+//  CommentEditViewController.swift
 //  CommentCardWriter
 //
 //  Created by Dunlop, Hugo (PEPW) on 27/02/2020.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Comment: UIViewController, UITextViewDelegate {
+class CommentEditViewController: UIViewController, UITextViewDelegate {
 
 }
