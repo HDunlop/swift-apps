@@ -18,12 +18,14 @@ class CommentViewController: UIViewController {
     var effort: Int
     var improvement: Int
     var division: Division
+    var comment: Comment?
     
-    init(_ enjoyment: Int, _ effort: Int, _ improvement: Int, _ division: Division) {
+    init(_ coder: NSCoder, _ enjoyment: Int, _ effort: Int, _ improvement: Int, _ division: Division) {
         self.enjoyment = enjoyment
         self.effort = effort
         self.improvement = improvement
         self.division = division
+        super.init(coder: coder)!
     }
     
     required init?(coder: NSCoder) {
@@ -34,7 +36,17 @@ class CommentViewController: UIViewController {
         super.viewDidLoad()
         teacher.text = division.teacher
         divisionLabel.text = division.code
-        let comment = Comment(effort: effort, enjoyment: enjoyment, improvement: improvement)
-        commentLabel.text = comment.writeComment()
+        comment = Comment(effort: effort, enjoyment: enjoyment, improvement: improvement)
+        commentLabel.text = comment?.writeComment()
     }
+    
+    @IBAction func edit(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "CommentEditViewController", creator: { coder in
+            return CommentEditViewController(coder, self.enjoyment, self.effort, self.improvement)
+            }) else {
+                fatalError("Failure to load edit view controller from storyboard")
+            }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

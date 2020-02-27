@@ -85,9 +85,6 @@
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                                <connections>
-                                    <action selector="enjoymentAction:" destination="GbS-Xs-R6E" eventType="valueChanged" id="54Z-7A-9jn"/>
-                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much effort do you put in to the subject? 1 is lowest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYi-kv-zWG">
                                 <rect key="frame" x="65" y="290" width="284" height="41"/>
@@ -108,9 +105,6 @@
                                     <segment title="Focus more in class"/>
                                     <segment title="Make better notes"/>
                                 </segments>
-                                <connections>
-                                    <action selector="improvementAction:" destination="GbS-Xs-R6E" eventType="valueChanged" id="yXt-A1-f9g"/>
-                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How could you improve?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-E6-mq1">
                                 <rect key="frame" x="113.5" y="417" width="187" height="20.5"/>
@@ -138,9 +132,6 @@
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                                <connections>
-                                    <action selector="effortAction:" destination="GbS-Xs-R6E" eventType="valueChanged" id="dla-UE-I5X"/>
-                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -211,39 +202,64 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSq-0Z-Mob">
-                                <rect key="frame" x="169.5" y="167" width="75" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hr-yI-sW6">
+                                <rect key="frame" x="169.5" y="172" width="75" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-kb-Omu">
+                                <rect key="frame" x="192" y="232.5" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="edit:" destination="i7D-oF-Qqp" eventType="touchUpInside" id="I0W-Ny-OlB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fSq-0Z-Mob" firstAttribute="top" secondItem="qYc-s1-Ab3" secondAttribute="baseline" constant="50" id="1Et-IC-1Yh"/>
                             <constraint firstItem="qYc-s1-Ab3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-mT-47z" secondAttribute="leading" constant="20" id="6U6-Ol-AFK"/>
+                            <constraint firstItem="WTY-kb-Omu" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="BO0-Uh-zn3"/>
                             <constraint firstItem="n2e-NC-zP5" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="CFi-Lt-uXf"/>
+                            <constraint firstItem="WTY-kb-Omu" firstAttribute="top" secondItem="0hr-yI-sW6" secondAttribute="bottom" constant="40" id="GKo-j6-0of"/>
                             <constraint firstItem="qYc-s1-Ab3" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="KVQ-Ly-3rr"/>
-                            <constraint firstItem="fSq-0Z-Mob" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-mT-47z" secondAttribute="leading" constant="20" id="OgY-z5-C3Z"/>
                             <constraint firstItem="n2e-NC-zP5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-mT-47z" secondAttribute="leading" constant="20" id="Q4B-bs-LEd"/>
-                            <constraint firstItem="SdX-mT-47z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fSq-0Z-Mob" secondAttribute="trailing" constant="20" id="UP0-oL-Fex"/>
+                            <constraint firstItem="0hr-yI-sW6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-mT-47z" secondAttribute="leading" constant="20" id="REW-vr-6vN"/>
+                            <constraint firstItem="SdX-mT-47z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0hr-yI-sW6" secondAttribute="trailing" constant="20" id="b2s-3K-Q9o"/>
                             <constraint firstItem="n2e-NC-zP5" firstAttribute="top" secondItem="SdX-mT-47z" secondAttribute="top" constant="20" id="dG4-yN-Bpu"/>
                             <constraint firstItem="SdX-mT-47z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n2e-NC-zP5" secondAttribute="trailing" constant="20" id="dRe-o9-GzE"/>
+                            <constraint firstItem="0hr-yI-sW6" firstAttribute="top" secondItem="qYc-s1-Ab3" secondAttribute="bottom" constant="50" id="gRq-3y-PbG"/>
+                            <constraint firstItem="0hr-yI-sW6" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="hNs-kB-OPX"/>
                             <constraint firstItem="qYc-s1-Ab3" firstAttribute="top" secondItem="n2e-NC-zP5" secondAttribute="baseline" constant="10" id="mlu-N0-ccz"/>
                             <constraint firstItem="SdX-mT-47z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qYc-s1-Ab3" secondAttribute="trailing" constant="20" id="wcU-On-aDm"/>
-                            <constraint firstItem="fSq-0Z-Mob" firstAttribute="centerX" secondItem="SdX-mT-47z" secondAttribute="centerX" id="y0r-CY-8wh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SdX-mT-47z"/>
                     </view>
                     <connections>
-                        <outlet property="commentLabel" destination="fSq-0Z-Mob" id="ha8-0M-6vm"/>
+                        <outlet property="commentLabel" destination="0hr-yI-sW6" id="244-l4-09J"/>
                         <outlet property="divisionLabel" destination="qYc-s1-Ab3" id="diF-oY-vWQ"/>
                         <outlet property="teacher" destination="n2e-NC-zP5" id="e9K-6n-oIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFG-bM-wbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3251" y="153"/>
+            <point key="canvasLocation" x="3250.7246376811595" y="152.67857142857142"/>
+        </scene>
+        <!--Comment Edit View Controller-->
+        <scene sceneID="y63-TS-AJf">
+            <objects>
+                <viewController storyboardIdentifier="CommentEditViewController" id="Skr-fR-lfz" customClass="CommentEditViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7UZ-ej-RcC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3k6-HJ-kyj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aZm-tp-1L9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWt-IG-X78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3941" y="153"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CWO-D2-cFg">
