@@ -33,10 +33,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if error != nil {
                     self.musicRecommendations.text = "Could not perform lookup of location for latitude: \(firstLocation.coordinate.latitude.description)"
                 } else {
-                    self.musicRecommendations.text = """
-                    \((placemarks?[0].country)!),
-                    \((placemarks?[0].locality)!)
-                    """
+                    if let firstPlacemark = placemarks?[0] {
+//                        self.musicRecommendations.text = self.getLocationBreakdown(placemark: firstPlacemark)
+                        self.musicRecommendations.text = self.getArtists(country: firstPlacemark.name!)
+                    }
                 }
             })
         }
@@ -44,6 +44,69 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         musicRecommendations.text = "Could not access user's location. Error: \(error.localizedDescription)"
+    }
+    
+    func getLocationBreakdown(placemark: CLPlacemark) -> String {
+        return """
+            Street: \(placemark.thoroughfare ?? "None")
+            Area: \(placemark.administrativeArea ?? "None")
+            Country: \(placemark.country ?? "None")
+            """
+    }
+    
+    func getArtists(country: String) -> String {
+        var refinedCountry = ""
+        
+        for char in country {
+            if char == " " {
+                refinedCountry = refinedCountry + "%20"
+            } else {
+                refinedCountry = refinedCountry + String(char)
+            }
+        }
+
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(refinedCountry)&entity=musicArtist")
+            else {
+                print("Invalid URL")
+                return("Invalid URL. Wasn't able to search ITunes")
+        }
+        
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                if let response = self.parseJson(json: data) {
+                    let names = response.results.map {
+                        return $0.artistName
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.musicRecommendations.text = names.joined(separator: ", \n")
+                    }
+                }
+            }
+        }.resume()
+        
+        return ""
+    }
+    
+    func parseJson(json: Data) -> ArtistResponse? {
+        let decoder = JSONDecoder()
+        
+        if let artistResponse = try? decoder.decode(ArtistResponse.self, from: json) {
+            return artistResponse
+        } else {
+            print("failed to decode to artist response")
+            return nil
+        }
+        
+//        do {
+//            let artistResponse = try decoder.decode(ArtistResponse.self, from: json)
+//            return artistResponse
+//        } catch {
+//            print("failed to decode to artist response")
+//            return nil
+//        }
     }
     
 }

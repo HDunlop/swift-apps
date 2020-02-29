@@ -15,9 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="29" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULl-mg-BGI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="70" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULl-mg-BGI">
                                 <rect key="frame" x="207" y="94" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -32,8 +32,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oPS-WB-11I" secondAttribute="bottom" constant="40" id="7Dr-DF-aty"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ULl-mg-BGI" secondAttribute="trailing" constant="120" id="H5o-AH-m90"/>
-                            <constraint firstItem="ULl-mg-BGI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="K05-ZE-P5g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ULl-mg-BGI" secondAttribute="trailing" constant="20" id="H5o-AH-m90"/>
+                            <constraint firstItem="ULl-mg-BGI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K05-ZE-P5g"/>
                             <constraint firstItem="ULl-mg-BGI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LWI-XC-dcD"/>
                             <constraint firstItem="ULl-mg-BGI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="kcW-Ak-HIG"/>
                             <constraint firstItem="oPS-WB-11I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ULl-mg-BGI" secondAttribute="bottom" constant="50" id="mbP-FI-sMR"/>
