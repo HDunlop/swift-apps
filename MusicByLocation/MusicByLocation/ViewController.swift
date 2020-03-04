@@ -34,8 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.musicRecommendations.text = "Could not perform lookup of location for latitude: \(firstLocation.coordinate.latitude.description)"
                 } else {
                     if let firstPlacemark = placemarks?[0] {
-//                        self.musicRecommendations.text = self.getLocationBreakdown(placemark: firstPlacemark)
-                        self.musicRecommendations.text = self.getArtists(country: firstPlacemark.name!)
+                        self.updateRecommendedArtists(search: firstPlacemark.name)
                     }
                 }
             })
@@ -54,21 +53,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             """
     }
     
-    func getArtists(country: String) -> String {
-        var refinedCountry = ""
-        
-        for char in country {
-            if char == " " {
-                refinedCountry = refinedCountry + "%20"
-            } else {
-                refinedCountry = refinedCountry + String(char)
-            }
-        }
+    func updateRecommendedArtists(search: String?) {
+        let searchTerm = search?.components(separatedBy: " ").first ?? "Lionel"
 
-        guard let url = URL(string: "https://itunes.apple.com/search?term=\(refinedCountry)&entity=musicArtist")
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(searchTerm)&entity=musicArtist")
             else {
-                print("Invalid URL")
-                return("Invalid URL. Wasn't able to search ITunes")
+                print("Invalid URL. Wasn't able to search ITunes")
+                return
         }
         
         let request = URLRequest(url: url)
@@ -86,8 +77,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         }.resume()
-        
-        return ""
     }
     
     func parseJson(json: Data) -> ArtistResponse? {
