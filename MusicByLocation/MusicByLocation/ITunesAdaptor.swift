@@ -12,7 +12,7 @@ class ITunesAdaptor {
     let baseUrl = "https://itunes.apple.com/search"
     let decoder = JSONDecoder()
     
-    func getArtists(search: String?, completion: ([Artist]?) -> Void) {
+    func getArtists(search: String?, completion: @escaping ([Artist]?) -> Void) {
         guard let search = search else {
             print("No search term provided. Terminating request")
             return
@@ -31,21 +31,13 @@ class ITunesAdaptor {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 if let response = self.parseJson(json: data) {
-                    let names = response.results.map {
-                        return $0.artistName
-                    }
-                    
-                    DispatchQueue.main.async {
-                        self.musicRecommendations.text = names.joined(separator: ", \n")
-                    }
+                    completion(response.results)
                 }
             }
         }.resume()
     }
     
     func parseJson(json: Data) -> ArtistResponse? {
-        let decoder = JSONDecoder()
-        
         if let artistResponse = try? decoder.decode(ArtistResponse.self, from: json) {
             return artistResponse
         } else {
