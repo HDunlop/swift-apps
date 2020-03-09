@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Division {
+class Division: Codable {
     
     let code: String
     var students: [Student] = []
@@ -25,13 +25,9 @@ class Division {
     }
     
     func getAbsence(for date: Date) -> Absence? {
-        absences.first {$0.takenOn == date}
-        //the above line is equivalent to those below. Jesus Christ
-//        for absence in absences {
-//            if absence.takenOn == date {
-//                return absence
-//            }
-//        }
-//        return nil
+        absences.first {
+            let comparison = Calendar.current.compare($0.takenOn, to: date, toGranularity: .day)
+            return comparison == .orderedSame
+        }
     }
 }

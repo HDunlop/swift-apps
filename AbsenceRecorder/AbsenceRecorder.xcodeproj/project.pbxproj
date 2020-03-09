@@ -21,6 +21,11 @@
 		4C68A40C23E211C50038AC1C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A40B23E211C50038AC1C /* Student.swift */; };
 		4C68A40E23E212410038AC1C /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A40D23E212410038AC1C /* Division.swift */; };
 		4C68A41023E2132B0038AC1C /* DivisionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A40F23E2132B0038AC1C /* DivisionFactory.swift */; };
+		4CC570262416E04500DE37A4 /* DivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC570252416E04500DE37A4 /* DivisionTests.swift */; };
+		4CC570272416E0BE00DE37A4 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A40D23E212410038AC1C /* Division.swift */; };
+		4CC570282416E0C500DE37A4 /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D77A323EB46D2005AB022 /* Absence.swift */; };
+		4CC5702C2416E30C00DE37A4 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68A40B23E211C50038AC1C /* Student.swift */; };
+		4CC5702F2416E9F600DE37A4 /* UserDocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5702E2416E9F600DE37A4 /* UserDocumentManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,8 @@
 		4C68A40B23E211C50038AC1C /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4C68A40D23E212410038AC1C /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
 		4C68A40F23E2132B0038AC1C /* DivisionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionFactory.swift; sourceTree = "<group>"; };
+		4CC570252416E04500DE37A4 /* DivisionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionTests.swift; sourceTree = "<group>"; };
+		4CC5702E2416E9F600DE37A4 /* UserDocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDocumentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,16 +121,11 @@
 				4C68A3DB23E20A670038AC1C /* AppDelegate.swift */,
 				4C68A3DD23E20A670038AC1C /* SceneDelegate.swift */,
 				4C68A3DF23E20A670038AC1C /* HomeViewController.swift */,
+				4CC5702A2416E0ED00DE37A4 /* HomeViewController classes */,
 				4C68A3E123E20A670038AC1C /* Main.storyboard */,
 				4C68A3E423E20A760038AC1C /* Assets.xcassets */,
 				4C68A3E623E20A760038AC1C /* LaunchScreen.storyboard */,
 				4C68A3E923E20A760038AC1C /* Info.plist */,
-				4C68A40B23E211C50038AC1C /* Student.swift */,
-				4C68A40D23E212410038AC1C /* Division.swift */,
-				4C68A40F23E2132B0038AC1C /* DivisionFactory.swift */,
-				4C396DDD23E8CAEC00A302F0 /* DivisionAbsenceTableViewController.swift */,
-				4C3D77A123EB453F005AB022 /* StudentCell.swift */,
-				4C3D77A323EB46D2005AB022 /* Absence.swift */,
 			);
 			path = AbsenceRecorder;
 			sourceTree = "<group>";
@@ -131,6 +133,7 @@
 		4C68A3F123E20A780038AC1C /* AbsenceRecorderTests */ = {
 			isa = PBXGroup;
 			children = (
+				4CC570252416E04500DE37A4 /* DivisionTests.swift */,
 				4C68A3F223E20A780038AC1C /* AbsenceRecorderTests.swift */,
 				4C68A3F423E20A780038AC1C /* Info.plist */,
 			);
@@ -144,6 +147,20 @@
 				4C68A3FF23E20A780038AC1C /* Info.plist */,
 			);
 			path = AbsenceRecorderUITests;
+			sourceTree = "<group>";
+		};
+		4CC5702A2416E0ED00DE37A4 /* HomeViewController classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C68A40B23E211C50038AC1C /* Student.swift */,
+				4C68A40D23E212410038AC1C /* Division.swift */,
+				4C68A40F23E2132B0038AC1C /* DivisionFactory.swift */,
+				4C396DDD23E8CAEC00A302F0 /* DivisionAbsenceTableViewController.swift */,
+				4C3D77A123EB453F005AB022 /* StudentCell.swift */,
+				4C3D77A323EB46D2005AB022 /* Absence.swift */,
+				4CC5702E2416E9F600DE37A4 /* UserDocumentManager.swift */,
+			);
+			path = "HomeViewController classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +301,7 @@
 				4C3D77A223EB453F005AB022 /* StudentCell.swift in Sources */,
 				4C68A3DE23E20A670038AC1C /* SceneDelegate.swift in Sources */,
 				4C68A40C23E211C50038AC1C /* Student.swift in Sources */,
+				4CC5702F2416E9F600DE37A4 /* UserDocumentManager.swift in Sources */,
 				4C68A41023E2132B0038AC1C /* DivisionFactory.swift in Sources */,
 				4C396DDE23E8CAED00A302F0 /* DivisionAbsenceTableViewController.swift in Sources */,
 			);
@@ -293,7 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC570262416E04500DE37A4 /* DivisionTests.swift in Sources */,
+				4CC570282416E0C500DE37A4 /* Absence.swift in Sources */,
 				4C68A3F323E20A780038AC1C /* AbsenceRecorderTests.swift in Sources */,
+				4CC5702C2416E30C00DE37A4 /* Student.swift in Sources */,
+				4CC570272416E0BE00DE37A4 /* Division.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
