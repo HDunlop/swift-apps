@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fz6-bI-vBz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fz6-bI-vBz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Divisions-->
         <scene sceneID="hSv-bx-eHF">
             <objects>
-                <tableViewController id="Cjd-nG-4cE" customClass="HomeViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Cjd-nG-4cE" customClass="HomeViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cjB-wy-dH7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zi9-sT-N7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966.6666666666667" y="152.67857142857142"/>
+            <point key="canvasLocation" x="539" y="919"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="LvR-27-Icq">
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndk-4F-oW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="153"/>
+            <point key="canvasLocation" x="1209" y="919"/>
         </scene>
         <!--Comment View Controller-->
         <scene sceneID="AZF-Qx-HtK">
@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFG-bM-wbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3250.7246376811595" y="152.67857142857142"/>
+            <point key="canvasLocation" x="1877" y="919"/>
         </scene>
         <!--Comment Edit View Controller-->
         <scene sceneID="y63-TS-AJf">
@@ -252,19 +252,54 @@
                     <view key="view" contentMode="scaleToFill" id="7UZ-ej-RcC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-kO-XUv">
+                                <rect key="frame" x="187.5" y="168" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetPressed:" destination="Skr-fR-lfz" eventType="touchUpInside" id="bWC-l3-8iw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6f-U8-JDP">
+                                <rect key="frame" x="179.5" y="218" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmPressed:" destination="Skr-fR-lfz" eventType="touchUpInside" id="q1w-wP-W7T"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTI-nA-qmE">
+                                <rect key="frame" x="191" y="94" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x9z-kO-XUv" firstAttribute="centerX" secondItem="3k6-HJ-kyj" secondAttribute="centerX" id="7lq-rZ-N1M"/>
+                            <constraint firstItem="x9z-kO-XUv" firstAttribute="top" secondItem="gTI-nA-qmE" secondAttribute="bottom" constant="40" id="APC-xF-qV5"/>
+                            <constraint firstItem="C6f-U8-JDP" firstAttribute="centerX" secondItem="3k6-HJ-kyj" secondAttribute="centerX" id="Hxw-wn-AcT"/>
+                            <constraint firstItem="gTI-nA-qmE" firstAttribute="centerX" secondItem="3k6-HJ-kyj" secondAttribute="centerX" id="MCr-bn-8H8"/>
+                            <constraint firstItem="3k6-HJ-kyj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gTI-nA-qmE" secondAttribute="trailing" constant="20" id="PYJ-7H-0nA"/>
+                            <constraint firstItem="C6f-U8-JDP" firstAttribute="top" secondItem="x9z-kO-XUv" secondAttribute="bottom" constant="20" id="VDa-Un-Uz2"/>
+                            <constraint firstItem="gTI-nA-qmE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3k6-HJ-kyj" secondAttribute="leading" constant="20" id="k9T-ku-pdv"/>
+                            <constraint firstItem="gTI-nA-qmE" firstAttribute="top" secondItem="3k6-HJ-kyj" secondAttribute="top" constant="50" id="lS3-kS-hfD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3k6-HJ-kyj"/>
                     </view>
                     <navigationItem key="navigationItem" id="aZm-tp-1L9"/>
+                    <connections>
+                        <outlet property="textField" destination="gTI-nA-qmE" id="5VB-KK-Ilp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWt-IG-X78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3941" y="153"/>
+            <point key="canvasLocation" x="2537.68115942029" y="918.75"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Subjects-->
         <scene sceneID="CWO-D2-cFg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fz6-bI-vBz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fz6-bI-vBz" userLabel="Subjects" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Subjects" image="book" catalog="system" id="8CH-vl-dLc" userLabel="Subjects"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WvP-2B-4Xu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -277,7 +312,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Z3-M2-kGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.5217391304348" y="152.67857142857142"/>
+            <point key="canvasLocation" x="-132" y="919"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
+    </resources>
 </document>

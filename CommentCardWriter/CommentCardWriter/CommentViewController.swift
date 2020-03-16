@@ -42,7 +42,7 @@ class CommentViewController: UIViewController {
     
     @IBAction func edit(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(identifier: "CommentEditViewController", creator: { coder in
-            return CommentEditViewController(coder, self.enjoyment, self.effort, self.improvement)
+            return CommentEditViewController(coder, self.comment, self.enjoyment, self.effort, self.improvement, self.division)
             }) else {
                 fatalError("Failure to load edit view controller from storyboard")
             }
