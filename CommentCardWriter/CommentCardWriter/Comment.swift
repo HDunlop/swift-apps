@@ -45,4 +45,8 @@ class Comment {
         }
         return comment
     }
+    
+    func overwriteComment(comment: String) {
+        self.comment = comment
+    }
 }
