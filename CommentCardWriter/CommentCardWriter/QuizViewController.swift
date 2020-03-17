@@ -15,7 +15,6 @@ class QuizViewController: UIViewController {
     var theEffort: Int = 0
     var theOpinion: Int = 0
     
-    
     init(_ coder: NSCoder, division: Division) {
         self.division = division
         super.init(coder: coder)!
@@ -29,6 +28,7 @@ class QuizViewController: UIViewController {
     @IBOutlet var enjoyment: UISegmentedControl!
     @IBOutlet var effort: UISegmentedControl!
     @IBOutlet var improvement: UISegmentedControl!
+    @IBOutlet var confirmOutlet: UIButton!
     
     override func viewDidLoad() {
         divisionOutlet.text = division.code

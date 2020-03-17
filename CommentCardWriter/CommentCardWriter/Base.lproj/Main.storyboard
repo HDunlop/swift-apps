@@ -172,6 +172,7 @@
                         <viewLayoutGuide key="safeArea" id="Pf0-dp-wvg"/>
                     </view>
                     <connections>
+                        <outlet property="confirmOutlet" destination="Afk-ym-KiL" id="a6Y-jP-ANP"/>
                         <outlet property="divisionOutlet" destination="O8o-V9-rvQ" id="2YQ-Hk-ynb"/>
                         <outlet property="effort" destination="Wm2-u9-HhD" id="wJ3-xC-vVU"/>
                         <outlet property="enjoyment" destination="s6l-Um-3wz" id="Kb5-69-0cU"/>
