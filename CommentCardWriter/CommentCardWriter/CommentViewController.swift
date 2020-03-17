@@ -31,12 +31,6 @@ class CommentViewController: UIViewController, UITextFieldDelegate {
         super.init(coder: coder)!
     }
     
-    init(_ coder: NSCoder, _ comment: String?, _ division: Division) {
-        self.commentText = comment
-        self.division = division
-        super.init(coder: coder)!
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("you must have the NSCoder thingy")
     }
@@ -62,15 +56,6 @@ class CommentViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func edit(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(identifier: "CommentEditViewController", creator: { coder in
-            return CommentEditViewController(coder, self.commentLabel.text, self.division)
-            }) else {
-                fatalError("Failure to load edit view controller from storyboard")
-            }
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func tempEdit(_ sender: Any) {
         textField.isHidden = false
         confirmOutlet.isHidden = false
         textField.text = commentLabel.text
